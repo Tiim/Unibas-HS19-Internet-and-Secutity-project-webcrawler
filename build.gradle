@@ -26,6 +26,8 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+
+    compile 'org.jsoup:jsoup:1.11.3'
 }
 
 // Define the main class for the application
