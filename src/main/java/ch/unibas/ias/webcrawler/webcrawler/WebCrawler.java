@@ -2,7 +2,10 @@ package ch.unibas.ias.webcrawler.webcrawler;
 
 import ch.unibas.ias.webcrawler.database.Database;
 import ch.unibas.ias.webcrawler.database.FileDatabase;
+import org.jsoup.Connection;
+import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
+import org.jsoup.UnsupportedMimeTypeException;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -12,64 +15,90 @@ import sun.util.resources.cldr.rw.CurrencyNames_rw;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.regex.PatternSyntaxException;
 
 public class WebCrawler implements Crawler {
 
+
     //inventory of all links visited
-    private final Set<URL> links;
+    private final List<MyDocument> visitedLinks;
+    private final double runtime;
     private final long startTime;
 
-    private WebCrawler(final URL startURL) {
-        this.links = new HashSet<>();
+    private WebCrawler(final URL startURL, final double runtime) {
+        this.visitedLinks = new LinkedList<>();
         this.startTime = System.currentTimeMillis();
-        crawl(initURLS(startURL));
-    }
-
-    private Set<URL> initURLS(final URL startURL) {
-        return Collections.singleton(startURL);
+        this.runtime = runtime;
+        crawl(startURL);
     }
 
     @Override
-    public void crawl(final Set<URL> urls) {
-        //remove all URLS we have already visited
-        urls.removeAll(this.links);
-        if(!urls.isEmpty()) {
-            final Set<URL> newURLS = new HashSet<>();
-            try {
-                //add all links on current webpage to Hashset
-                this.links.addAll(urls);
-                for(final URL url : urls) {
-                    System.out.println("time = " + (System.currentTimeMillis()-startTime) +
-                            "   connected to: " + url);
-                    //save current URL page into Document object
-                    final Document document = Jsoup.connect(url.toString()).get();
-                    //save all URLS on current page into Elements object
-                    final Elements linksOnPage = document.select("a[href]");
-                    //save all URLS on current page into newURLS HashSet;
-                    for(final Element element : linksOnPage) {
-                        final String urlText = element.attr("abs:href");
-                        final URL discoveredURL = new URL(urlText);
-                        newURLS.add(discoveredURL);
+    public void crawl(final URL startURL) {
+        Queue<URL> toVisit = new LinkedList<>();
+        Queue<Integer> distances = new LinkedList<>();
+        int currentDist = 0;
+        toVisit.add(startURL);
+        distances.add(currentDist);
+            while (!toVisit.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
+                try {
+                    Document currentWebPage = Jsoup.connect(toVisit.poll().toString()).get();
+                    currentDist = distances.poll();
+                    this.visitedLinks.add(new MyDocument(currentWebPage,currentDist));
+
+                    currentDist++;
+
+                    final Elements linksOnPage = currentWebPage.select("a[href]");
+                    for(Element e : linksOnPage) {
+                        final String urlText = e.attr("abs:href");
+                        final URL newURL = new URL(urlText);
+                        toVisit.add(newURL);
+                        distances.add(currentDist);
                     }
+
+                } catch(MalformedURLException e) {
+                    //TODO figure out if this is an issue, malformed URLS happen quite often
+                    //e.printStackTrace();
+                } catch(UnsupportedMimeTypeException e) {
+                    //TODO figure out if this is an issue, UnsupportedMimeType happen quite rarely, seems to happen with pdf
+                    //https://www.unibas.ch/dam/jcr:5a79b475-5fc5-4f16-be03-91b06adfd5c3/AS_MAGAZIN_2018_Web.pdf
+                    //e.printStackTrace();
+                } catch(HttpStatusException e) {
+                    //TODO figure out if this is an issue, HttpStatusException happen quite rarely, happened when accessing:
+                    //https://www.linkedin.com/school/university-of-basel/
+                    //e.printStackTrace();
+                } catch(IOException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
             }
-            crawl(newURLS);
-        }
+        System.out.println("Crawl completed!");
+    }
+
+    @Override
+    public List<MyDocument> getVisitedLinks() {
+        return visitedLinks;
     }
 
     public static void main(String args[]) {
         try {
-          final Crawler crawler = new WebCrawler(new URL("http://www.amazon.com/"));
-        } catch (MalformedURLException e) {
+          // call with Double.POSITIVE_INFINITY to run infinitely
+          final Crawler crawler = new WebCrawler(new URL("http://mysmallwebpage.com/"),10000);
+          Database database = new FileDatabase();
+
+          List<MyDocument> results = crawler.getVisitedLinks();
+
+          for(MyDocument d : results) {
+              //database.addRecord(d.getDocument().location(),d.getDocument().html(),d.getDocument().head().toString(),Calendar.getInstance().getTime());
+              System.out.println(d.getDistance());
+              System.out.println(d.getDocument().location());
+          }
+
+
+
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
-
 
     }
 }
