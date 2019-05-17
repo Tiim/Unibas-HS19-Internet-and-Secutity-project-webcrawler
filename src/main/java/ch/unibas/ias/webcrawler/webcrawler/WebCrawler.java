@@ -1,8 +1,6 @@
 package ch.unibas.ias.webcrawler.webcrawler;
 
-import ch.unibas.ias.webcrawler.database.Database;
-import ch.unibas.ias.webcrawler.database.FileDatabase;
-import org.jsoup.Connection;
+import ch.unibas.ias.webcrawler.database.*;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.UnsupportedMimeTypeException;
@@ -15,7 +13,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
-import java.util.regex.PatternSyntaxException;
 
 public class WebCrawler implements Crawler {
 
@@ -34,10 +31,10 @@ public class WebCrawler implements Crawler {
 
     @Override
     public void crawl(final URL startURL) {
-        Queue<URL> toVisit = new LinkedList<>();
+        UrlQueue toVisit = new QueueExtender(new MemoryQueue());
         Queue<Integer> distances = new LinkedList<>();
         int currentDist = 0;
-        toVisit.add(startURL);
+        toVisit.push(startURL);
         distances.add(currentDist);
             while (!toVisit.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
                 try {
@@ -52,7 +49,7 @@ public class WebCrawler implements Crawler {
                     for(Element e : linksOnPage) {
                         final String urlText = e.attr("abs:href");
                         final URL newURL = new URL(urlText);
-                        toVisit.add(newURL);
+                        toVisit.push(newURL);
                         distances.add(currentDist);
                     }
 
@@ -83,7 +80,7 @@ public class WebCrawler implements Crawler {
         try {
           // call with Double.POSITIVE_INFINITY to run infinitely
           final Crawler crawler = new WebCrawler(new URL("http://mysmallwebpage.com/"),10000);
-          Database database = new FileDatabase();
+          Database database = new MemoryDatabase();
 
           List<MyDocument> results = crawler.getVisitedLinks();
 
