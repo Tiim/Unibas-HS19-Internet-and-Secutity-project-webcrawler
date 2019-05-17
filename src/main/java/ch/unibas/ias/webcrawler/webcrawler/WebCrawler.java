@@ -18,11 +18,15 @@ public class WebCrawler implements Crawler {
 
 
     //inventory of all links visited
+    private final Database db;
+    private final UrlQueue queue;
     private final List<MyDocument> visitedLinks;
     private final double runtime;
     private final long startTime;
 
-    private WebCrawler(final URL startURL, final double runtime) {
+    private WebCrawler(final URL startURL, final double runtime, Database db, UrlQueue queue) {
+        this.db = db;
+        this.queue = queue;
         this.visitedLinks = new LinkedList<>();
         this.startTime = System.currentTimeMillis();
         this.runtime = runtime;
@@ -31,14 +35,13 @@ public class WebCrawler implements Crawler {
 
     @Override
     public void crawl(final URL startURL) {
-        UrlQueue toVisit = new QueueExtender(new MemoryQueue());
         Queue<Integer> distances = new LinkedList<>();
         int currentDist = 0;
-        toVisit.push(startURL);
+        queue.push(startURL);
         distances.add(currentDist);
-            while (!toVisit.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
+            while (!queue.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
                 try {
-                    Document currentWebPage = Jsoup.connect(toVisit.poll().toString()).get();
+                    Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
                     currentDist = distances.poll();
                     MyDocument document = new MyDocument(currentWebPage, currentDist);
                     this.visitedLinks.add(document);
@@ -49,7 +52,7 @@ public class WebCrawler implements Crawler {
                     for(Element e : linksOnPage) {
                         final String urlText = e.attr("abs:href");
                         final URL newURL = new URL(urlText);
-                        toVisit.push(newURL);
+                        queue.push(newURL);
                         distances.add(currentDist);
                     }
 
@@ -72,26 +75,22 @@ public class WebCrawler implements Crawler {
     }
 
     @Override
-    public List<MyDocument> getVisitedLinks() {
-        return visitedLinks;
+    public Database getDatabase() {
+        return db;
     }
 
-    public static void main(String args[]) {
+    @Override
+    public UrlQueue getQueue() {
+        return queue;
+    }
+
+    public static void main(String args[]) throws Exception {
+        Database db = new MemoryDatabase();
+        UrlQueue queue = new MemoryQueue();
+
         try {
           // call with Double.POSITIVE_INFINITY to run infinitely
-          final Crawler crawler = new WebCrawler(new URL("http://mysmallwebpage.com/"),10000);
-          Database database = new MemoryDatabase();
-
-          List<MyDocument> results = crawler.getVisitedLinks();
-
-          for(MyDocument d : results) {
-              //database.addRecord(d.getDocument().location(),d.getDocument().html(),d.getDocument().head().toString(),Calendar.getInstance().getTime());
-              System.out.println(d.getDistance());
-              System.out.println(d.getDocument().location());
-          }
-
-
-
+          final Crawler crawler = new WebCrawler(new URL("http://mysmallwebpage.com/"),10000, db, queue);
 
         } catch (IOException e) {
             e.printStackTrace();
