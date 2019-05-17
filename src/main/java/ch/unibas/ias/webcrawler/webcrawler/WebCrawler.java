@@ -9,7 +9,6 @@ import org.jsoup.UnsupportedMimeTypeException;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import sun.util.resources.cldr.rw.CurrencyNames_rw;
 
 
 import java.io.IOException;
@@ -44,8 +43,9 @@ public class WebCrawler implements Crawler {
                 try {
                     Document currentWebPage = Jsoup.connect(toVisit.poll().toString()).get();
                     currentDist = distances.poll();
-                    this.visitedLinks.add(new MyDocument(currentWebPage,currentDist));
-
+                    MyDocument document = new MyDocument(currentWebPage, currentDist);
+                    this.visitedLinks.add(document);
+                    System.out.println("Crawled " + document);
                     currentDist++;
 
                     final Elements linksOnPage = currentWebPage.select("a[href]");

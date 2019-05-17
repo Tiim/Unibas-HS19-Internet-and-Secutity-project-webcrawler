@@ -32,4 +32,11 @@ public class MyDocument {
         return this.distance;
     }
 
+    @Override
+    public String toString() {
+        return "Doc{" +
+                "location=" + document.location() +
+                ", distance=" + distance +
+                '}';
+    }
 }
