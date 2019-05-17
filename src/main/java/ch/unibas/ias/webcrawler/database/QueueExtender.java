@@ -15,6 +15,8 @@ public class QueueExtender implements UrlQueue {
     @Override
     public void push(URL url) {
 
+        url = getCleanedUrl(url);
+
         queue.push(url);
         try {
             URL root = getRoot(url);
@@ -35,6 +37,25 @@ public class QueueExtender implements UrlQueue {
             return new URL(String.format("%s://%s", protocol, host));
         } else {
             return new URL(String.format("%s://%s:%d", protocol, host, port));
+        }
+    }
+
+    private URL getCleanedUrl(URL urls) {
+        String url = urls.toString();
+        if (url != null) {
+            int queryPosition = url.indexOf('?');
+            if (queryPosition <= 0) {
+                queryPosition = url.indexOf('#');
+            }
+
+            if (queryPosition >= 0) {
+                url = url.substring(0, queryPosition);
+            }
+        }
+        try {
+            return new URL(url);
+        } catch (MalformedURLException e) {
+            return urls;
         }
     }
 

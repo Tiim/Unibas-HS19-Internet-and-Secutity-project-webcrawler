@@ -33,14 +33,11 @@ public class WebCrawler implements Crawler {
 
     @Override
     public void crawl(final URL startURL) {
-        Queue<Integer> distances = new LinkedList<>();
         int currentDist = 0;
         queue.push(startURL);
-        distances.add(currentDist);
             while (!queue.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
                 try {
                     Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
-                    currentDist = distances.poll();
                     MyDocument document = new MyDocument(currentWebPage, currentDist);
                     save(document);
                     System.out.println("Crawled " + document);
@@ -51,7 +48,6 @@ public class WebCrawler implements Crawler {
                         final String urlText = e.attr("abs:href");
                         final URL newURL = new URL(urlText);
                         queue.push(newURL);
-                        distances.add(currentDist);
                     }
 
                 } catch(MalformedURLException e) {
@@ -92,7 +88,7 @@ public class WebCrawler implements Crawler {
         DBConnection conn = new DBConnection();
         Database db = new H2Database(conn);
 
-        UrlQueue queue = new MemoryQueue();
+        UrlQueue queue = new QueueExtender(new H2Queue(conn));
 
         try {
           // call with Double.POSITIVE_INFINITY to run infinitely

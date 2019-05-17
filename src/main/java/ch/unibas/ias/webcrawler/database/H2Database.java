@@ -13,7 +13,7 @@ public class H2Database  implements Database{
 
     public H2Database(DBConnection conn) {
         try {
-            insertStmt = conn.newStatement("INSERT INTO page VALUES (?,?,?,?)");
+            insertStmt = conn.newStatement("INSERT INTO page (url, html, header, date) VALUES (?,?,?,?)");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
