@@ -29,7 +29,7 @@ dependencies {
 
     compile 'org.jsoup:jsoup:1.11.3'
     // https://mvnrepository.com/artifact/com.h2database/h2
-    testCompile group: 'com.h2database', name: 'h2', version: '1.4.199'
+    runtime group: 'com.h2database', name: 'h2', version: '1.4.195'
 
 }
 

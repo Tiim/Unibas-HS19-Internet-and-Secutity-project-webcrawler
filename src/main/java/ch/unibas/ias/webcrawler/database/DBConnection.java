@@ -8,7 +8,7 @@ public class DBConnection {
 
     public DBConnection() throws Exception {
         Class.forName("org.h2.Driver");
-        connection = DriverManager.getConnection("jdbc:h2:test", "sa", "");
+        connection = DriverManager.getConnection("jdbc:h2:./test", "sa", "");
         init();
     }
 
@@ -20,7 +20,7 @@ public class DBConnection {
                 "date TIMESTAMP)";
 
         String tableQueue = "CREATE TABLE IF NOT EXISTS queue (" +
-                "id IDENTITY"+
+                "id IDENTITY,"+
                 "url VARCHAR(500))";
 
         Statement stmt = connection.createStatement();

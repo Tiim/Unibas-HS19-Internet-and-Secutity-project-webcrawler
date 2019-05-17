@@ -20,14 +20,12 @@ public class WebCrawler implements Crawler {
     //inventory of all links visited
     private final Database db;
     private final UrlQueue queue;
-    private final List<MyDocument> visitedLinks;
     private final double runtime;
     private final long startTime;
 
     private WebCrawler(final URL startURL, final double runtime, Database db, UrlQueue queue) {
         this.db = db;
         this.queue = queue;
-        this.visitedLinks = new LinkedList<>();
         this.startTime = System.currentTimeMillis();
         this.runtime = runtime;
         crawl(startURL);
@@ -44,7 +42,7 @@ public class WebCrawler implements Crawler {
                     Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
                     currentDist = distances.poll();
                     MyDocument document = new MyDocument(currentWebPage, currentDist);
-                    this.visitedLinks.add(document);
+                    save(document);
                     System.out.println("Crawled " + document);
                     currentDist++;
 
@@ -74,6 +72,10 @@ public class WebCrawler implements Crawler {
         System.out.println("Crawl completed!");
     }
 
+    private void save(MyDocument document) {
+        db.addRecord(document.getDocument().location(), document.getDocument().outerHtml(),"", new Date());
+    }
+
     @Override
     public Database getDatabase() {
         return db;
@@ -85,7 +87,11 @@ public class WebCrawler implements Crawler {
     }
 
     public static void main(String args[]) throws Exception {
-        Database db = new MemoryDatabase();
+
+        //Database db = new MemoryDatabase();
+        DBConnection conn = new DBConnection();
+        Database db = new H2Database(conn);
+
         UrlQueue queue = new MemoryQueue();
 
         try {
