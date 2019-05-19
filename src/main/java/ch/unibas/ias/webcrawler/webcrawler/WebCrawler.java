@@ -31,17 +31,26 @@ public class WebCrawler implements Crawler {
         crawl(startURL);
     }
 
+    private String testWPLogin(MyDocument document) {
+            try {
+                Document WPLogin = Jsoup.connect(document.checkWPLogin()).get();
+            } catch (Exception e) {
+                return "WPLogin URL was changed";
+            }
+            return "WPLogin URL was not changed";
+    }
+
     @Override
     public void crawl(final URL startURL) {
-        int currentDist = 0;
         queue.push(startURL);
             while (!queue.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
                 try {
                     Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
-                    MyDocument document = new MyDocument(currentWebPage, currentDist);
+                    MyDocument document = new MyDocument(currentWebPage);
                     save(document);
                     System.out.println("Crawled " + document + " " + document.getCMS());
-                    currentDist++;
+                    if(document.getCMS().equals("WordPress"))
+                        System.out.println(testWPLogin(document));
 
                     final Elements linksOnPage = currentWebPage.select("a[href]");
                     for(Element e : linksOnPage) {
@@ -63,6 +72,8 @@ public class WebCrawler implements Crawler {
                     //e.printStackTrace();
                 } catch(IOException e) {
                     e.printStackTrace();
+                } catch(Exception e) {
+
                 }
             }
         System.out.println("Crawl completed!");

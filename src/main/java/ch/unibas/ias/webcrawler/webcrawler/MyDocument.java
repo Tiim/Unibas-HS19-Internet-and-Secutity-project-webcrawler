@@ -12,53 +12,69 @@ public class MyDocument {
     /**
      * distance to the startURL
      */
-    private final int distance;
+
+    private String CMS;
+
+    private String CMSVersion;
 
     /**
      * consturctor
      * @param document
-     * @param distance
      */
-    public MyDocument(Document document, int distance) {
+    public MyDocument(Document document) {
         this.document = document;
-        this. distance = distance;
+        this.CMS = this.determinCMS();
+        this.CMSVersion = this.findWPVersion();
     }
 
     public Document getDocument() {
         return this.document;
     }
 
-    public int getDistance() {
-        return this.distance;
-    }
 
     @Override
     public String toString() {
         return "Doc{" +
                 "location=" + document.location() +
-                ", distance=" + distance +
                 '}';
     }
 
-    public String getCMS() {
+    public String determinCMS() {
         if( document.outerHtml().contains("wordpress")||
             document.outerHtml().contains("WordPress")||
             document.outerHtml().contains("WORDPRESS")||
             document.outerHtml().contains("word press")||
             document.outerHtml().contains("Word Press")) {
-            return "WordPress " + findWPVersion();
+            return "WordPress";
         }
         return "?";
     }
 
     private String findWPVersion() {
-        if(document.outerHtml().contains("WordPress")) {
-            int index = document.outerHtml().indexOf("WordPress");
-            index+=10;
+        if(document.outerHtml().contains("name=\"generator\" content=\"WordPress")) {
+            int index = document.outerHtml().indexOf("name=\"generator\" content=\"WordPress ");
+            index+=36;
             return document.outerHtml().substring(index, index+5);
 
         }
         return "?";
+    }
+
+    public String getCMSVersion() {
+        return this.CMSVersion;
+    }
+    public String getCMS() {
+        return this.CMS;
+    }
+
+    public String checkWPLogin() {
+        String logintest;
+        if(document.location().endsWith("/")) {
+            logintest = document.location() + "wp-admin";
+        } else {
+            logintest = document.location() + "/wp-admin";
+        }
+        return logintest;
     }
 
 }
