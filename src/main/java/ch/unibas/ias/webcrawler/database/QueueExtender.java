@@ -17,7 +17,7 @@ public class QueueExtender implements UrlQueue {
 
         url = getCleanedUrl(url);
 
-        queue.push(url);
+        //queue.push(url);
         try {
             URL root = getRoot(url);
             queue.push(root);

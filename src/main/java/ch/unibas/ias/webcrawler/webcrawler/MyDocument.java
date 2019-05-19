@@ -39,4 +39,29 @@ public class MyDocument {
                 ", distance=" + distance +
                 '}';
     }
+
+    public String getCMS() {
+        if( document.outerHtml().contains("wordpress")||
+            document.outerHtml().contains("WordPress")||
+            document.outerHtml().contains("WORDPRESS")||
+            document.outerHtml().contains("word press")||
+            document.outerHtml().contains("Word Press")) {
+            return "WordPress " + findWPVersion();
+        }
+        return "?";
+    }
+
+    private String findWPVersion() {
+        if(document.outerHtml().contains("WordPress")) {
+            int index = document.outerHtml().indexOf("WordPress");
+            index+=10;
+            return document.outerHtml().substring(index, index+5);
+
+        }
+        return "?";
+    }
+
 }
+
+
+

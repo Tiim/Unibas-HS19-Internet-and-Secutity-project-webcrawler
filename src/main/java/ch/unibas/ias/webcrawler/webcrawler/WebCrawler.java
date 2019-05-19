@@ -40,7 +40,7 @@ public class WebCrawler implements Crawler {
                     Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
                     MyDocument document = new MyDocument(currentWebPage, currentDist);
                     save(document);
-                    System.out.println("Crawled " + document);
+                    System.out.println("Crawled " + document + " " + document.getCMS());
                     currentDist++;
 
                     final Elements linksOnPage = currentWebPage.select("a[href]");
@@ -92,7 +92,7 @@ public class WebCrawler implements Crawler {
 
         try {
           // call with Double.POSITIVE_INFINITY to run infinitely
-          final Crawler crawler = new WebCrawler(new URL("http://mysmallwebpage.com/"),10000, db, queue);
+          final Crawler crawler = new WebCrawler(new URL("https://bonestructure.ca/en/os/"),180000, db, queue);
 
         } catch (IOException e) {
             e.printStackTrace();
