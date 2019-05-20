@@ -15,6 +15,9 @@ public class DBConnection {
   }
 
   private void init() throws SQLException {
+
+    String compress = "SET COMPRESS_LOB DEFLATE";
+
     String tablePage = "CREATE TABLE IF NOT EXISTS page (" +
             "id IDENTITY auto_increment PRIMARY KEY," +
             "url VARCHAR(500) UNIQUE," +
@@ -38,12 +41,13 @@ public class DBConnection {
             "key VARCHAR(100) PRIMARY KEY," +
             "value VARCHAR(200))";
 
+    connection.createStatement().execute(compress);
     Statement stmt = connection.createStatement();
     stmt.execute(tablePage);
     Statement stmt2 = connection.createStatement();
     stmt2.execute(tableQueue);
     Statement stmt3 = connection.createStatement();
-    stmt2.execute(tableMeta);
+    stmt3.execute(tableMeta);
 
     String update = "MERGE INTO meta KEY (key) VALUES (?, ?)";
     updateMetaStmt = connection.prepareStatement(update);
