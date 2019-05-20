@@ -21,12 +21,29 @@ public class Statistics {
 
   private void compute() throws SQLException {
     countCmsAndVersions();
+    queueLength();
   }
 
   private void countCmsAndVersions() throws SQLException {
-    ResultSet rs = connection.newStatement("SELECT cms, version, count(*) FROM page GROUP BY cms, version").executeQuery();
+    System.out.println("CMS AND VERSIONS");
+    System.out.println("================");
+    ResultSet rs = connection.newStatement("SELECT cms, version, count(*) as c FROM page GROUP BY cms, version ORDER BY c DESC").executeQuery();
+    System.out.println("Cms, Version, Count");
     while (rs.next()) {
-      System.out.println(rs.getString(1) + " | " + rs.getString(2) + " --> " + rs.getInt(3));
+      System.out.println(rs.getString(1) + ", " + rs.getString(2) + ", " + rs.getInt(3));
     }
+  }
+
+  private void queueLength() throws SQLException {
+    ResultSet done = connection.newStatement("SELECT count(*) FROM queue WHERE crawled = true").executeQuery();
+    ResultSet notYetDone = connection.newStatement("SELECT count(*) FROM queue WHERE crawled = false").executeQuery();
+
+    done.next();
+    notYetDone.next();
+    System.out.println("QUEUE");
+    System.out.println("================");
+    System.out.println("Done: " + done.getInt(1));
+    System.out.println("Not Done: " + notYetDone.getInt(1));
+
   }
 }

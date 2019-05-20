@@ -3,16 +3,21 @@
  */
 package ch.unibas.ias.webcrawler;
 
+import ch.unibas.ias.webcrawler.database.*;
+import ch.unibas.ias.webcrawler.webcrawler.Crawler;
 import ch.unibas.ias.webcrawler.webcrawler.WebCrawler;
+
+import java.net.URL;
 
 public class App {
 
     private static final int THREADS = 3;
 
 
-    public static void run(String[] args) {
+    public static void run(Database db, UrlQueue queue) {
         try {
-            WebCrawler.main(args);
+            final Crawler crawler = new WebCrawler(180000, db, queue);
+            crawler.crawl();
         } catch (Exception e) {
 
         }
@@ -20,13 +25,19 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        Thread[] t = new Thread[THREADS-1];
+        Thread[] t = new Thread[THREADS];
 
-        for(int i = 0; i < THREADS-1; i++) {
-            t[i] = new Thread(() -> run(args));
+        DBConnection conn = new DBConnection();
+        Database db = new H2Database(conn);
+
+        UrlQueue queue = new QueueExtender(new H2Queue(conn));
+
+        WebCrawler.startUrls(queue);
+
+        for(int i = 0; i < THREADS; i++) {
+            t[i] = new Thread(() -> run(db, queue));
             t[i].start();
         }
-        WebCrawler.main(args);
 
     }
 }

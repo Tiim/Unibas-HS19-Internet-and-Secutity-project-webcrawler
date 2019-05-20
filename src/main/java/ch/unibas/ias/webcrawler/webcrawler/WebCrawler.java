@@ -24,18 +24,25 @@ public class WebCrawler implements Crawler {
     private final double runtime;
     private final long startTime;
 
-    private WebCrawler(final URL startURL, final double runtime, Database db, UrlQueue queue) {
+    public WebCrawler(final double runtime, Database db, UrlQueue queue) {
         this.db = db;
         this.queue = queue;
         this.startTime = System.currentTimeMillis();
         this.runtime = runtime;
-        crawl(startURL);
+    }
+
+    public static void startUrls(UrlQueue queue) {
+        try {
+            queue.push(new URL("https://scbirs.ch"));
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
     @Override
-    public void crawl(final URL startURL) {
-        queue.push(startURL);
+    public void crawl() {
+
             while (!queue.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
                 try {
                     Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
@@ -83,13 +90,9 @@ public class WebCrawler implements Crawler {
 
         UrlQueue queue = new QueueExtender(new H2Queue(conn));
 
-        try {
-          // call with Double.POSITIVE_INFINITY to run infinitely
-          final Crawler crawler = new WebCrawler(new URL("https://dictionary-api.cambridge.org/"),180000, db, queue);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        WebCrawler.startUrls(queue);
+        // call with Double.POSITIVE_INFINITY to run infinitely
+        final Crawler crawler = new WebCrawler(180000, db, queue);
 
     }
 }

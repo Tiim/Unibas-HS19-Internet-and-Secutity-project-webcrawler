@@ -15,10 +15,7 @@ public class H2Queue implements UrlQueue {
     private PreparedStatement countStmt;
     private PreparedStatement doneCountStmt;
 
-    private DBConnection conn;
-
     public H2Queue(DBConnection conn) {
-        this.conn = conn;
         try {
             pushStmt = conn.newStatement("INSERT INTO queue (url, crawled) VALUES (?, false)");
             existsStmt = conn.newStatement("SELECT url FROM queue WHERE url = ?");
@@ -58,7 +55,6 @@ public class H2Queue implements UrlQueue {
             rs.next();
             return rs.getInt(1);
         } catch (SQLException e) {
-            e.printStackTrace();
         }
         return 0;
     }
@@ -106,9 +102,9 @@ public class H2Queue implements UrlQueue {
 
     @Override
     public boolean isEmpty() {
-        boolean res;
         int backoff = 100;
-        do {
+        boolean res = size() == 0;
+        while (res && backoff < 2*30_000) {
             res = size() == 0;
 
             if (res) {
@@ -119,7 +115,7 @@ public class H2Queue implements UrlQueue {
                 }
                 backoff *= 2;
             }
-        } while (res && backoff < 30_000);
+        }
         return res;
     }
 }

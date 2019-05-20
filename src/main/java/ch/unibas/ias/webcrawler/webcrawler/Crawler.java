@@ -11,7 +11,7 @@ import java.util.Set;
 
 public interface Crawler {
 
-    void crawl(final URL startURL);
+    void crawl();
 
     Database getDatabase();
     UrlQueue getQueue();
