@@ -1,8 +1,11 @@
 package ch.unibas.ias.webcrawler.webcrawler;
 
+import ch.unibas.ias.webcrawler.StringHelper;
+import org.checkerframework.checker.units.qual.C;
 import org.jsoup.nodes.Document;
 
 import java.util.concurrent.ExecutionException;
+
 
 public class MyDocument {
     /**
@@ -24,7 +27,7 @@ public class MyDocument {
     public MyDocument(Document document) {
         this.document = document;
         this.CMS = this.determinCMS();
-        this.CMSVersion = this.findWPVersion();
+        this.CMSVersion = this.findCMSVersion();
     }
 
     public Document getDocument() {
@@ -35,7 +38,9 @@ public class MyDocument {
     @Override
     public String toString() {
         return "Doc{" +
-                "location=" + document.location() +
+                "  location = " + document.location() + "\t" +
+                "CMS = " + this.CMS + "\t" +
+                "CMSVer = " + this.CMSVersion + "\t" +
                 '}';
     }
 
@@ -46,16 +51,40 @@ public class MyDocument {
             document.outerHtml().contains("word press")||
             document.outerHtml().contains("Word Press")) {
             return "WordPress";
+        } else if( document.outerHtml().contains("Joomla")||
+                document.outerHtml().contains("joomla")||
+                document.outerHtml().contains("JOOMLA")) {
+            return "Joomla";
+
+        } else if( document.outerHtml().contains("Drupal")||
+                document.outerHtml().contains("drupal")||
+                document.outerHtml().contains("DRUPAL")) {
+            return "Drupal";
         }
         return "?";
     }
 
-    private String findWPVersion() {
-        if(document.outerHtml().contains("name=\"generator\" content=\"WordPress")) {
-            int index = document.outerHtml().indexOf("name=\"generator\" content=\"WordPress ");
+    private String findCMSVersion() {
+        if(StringHelper.containsIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"WordPress")) {
+            int index = StringHelper.indexOfIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"WordPress");
             index+=36;
-            return document.outerHtml().substring(index, index+5);
+            if(Character.isDigit(document.outerHtml().charAt(index))) {
+                if (Character.isDigit(document.outerHtml().charAt(index + 5))) {
+                    return document.outerHtml().substring(index, index + 5);
+                }
+                return document.outerHtml().substring(index, index + 3);
+            } else {
+                return "?";
+            }
 
+        } else if(StringHelper.containsIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"Drupal")) {
+            int index = StringHelper.indexOfIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"Drupal");
+            index+=33;
+            return document.outerHtml().substring(index, index+1);
+        } else if(StringHelper.containsIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"Joomla")) {
+            int index = StringHelper.indexOfIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"Joomla");
+            index+=33;
+            return document.outerHtml().substring(index, index+3);
         }
         return "?";
     }
@@ -65,16 +94,6 @@ public class MyDocument {
     }
     public String getCMS() {
         return this.CMS;
-    }
-
-    public String checkWPLogin() {
-        String logintest;
-        if(document.location().endsWith("/")) {
-            logintest = document.location() + "wp-admin";
-        } else {
-            logintest = document.location() + "/wp-admin";
-        }
-        return logintest;
     }
 
 }

@@ -11,6 +11,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.util.*;
 
@@ -31,14 +32,6 @@ public class WebCrawler implements Crawler {
         crawl(startURL);
     }
 
-    private String testWPLogin(MyDocument document) {
-            try {
-                Document WPLogin = Jsoup.connect(document.checkWPLogin()).get();
-            } catch (Exception e) {
-                return "WPLogin URL was changed";
-            }
-            return "WPLogin URL was not changed";
-    }
 
     @Override
     public void crawl(final URL startURL) {
@@ -48,9 +41,9 @@ public class WebCrawler implements Crawler {
                     Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
                     MyDocument document = new MyDocument(currentWebPage);
                     save(document);
-                    System.out.println("Crawled " + document + " " + document.getCMS());
+                    System.out.println("Crawled " + document);
                     if(document.getCMS().equals("WordPress"))
-                        System.out.println(testWPLogin(document));
+                        System.out.println(new WordPressLoginSecurityStats(document));
 
                     final Elements linksOnPage = currentWebPage.select("a[href]");
                     for(Element e : linksOnPage) {
@@ -70,10 +63,12 @@ public class WebCrawler implements Crawler {
                     //TODO figure out if this is an issue, HttpStatusException happen quite rarely, happened when accessing:
                     //https://www.linkedin.com/school/university-of-basel/
                     //e.printStackTrace();
-                } catch(IOException e) {
-                    e.printStackTrace();
-                } catch(Exception e) {
+                } catch(SocketTimeoutException e) {
 
+                } catch(IOException e) {
+                    //e.printStackTrace();
+                } catch(Exception e) {
+                    System.out.print("");
                 }
             }
         System.out.println("Crawl completed!");
@@ -103,7 +98,7 @@ public class WebCrawler implements Crawler {
 
         try {
           // call with Double.POSITIVE_INFINITY to run infinitely
-          final Crawler crawler = new WebCrawler(new URL("https://bonestructure.ca/en/os/"),180000, db, queue);
+          final Crawler crawler = new WebCrawler(new URL("https://www.themes.stashfamily.com/"),180000, db, queue);
 
         } catch (IOException e) {
             e.printStackTrace();
