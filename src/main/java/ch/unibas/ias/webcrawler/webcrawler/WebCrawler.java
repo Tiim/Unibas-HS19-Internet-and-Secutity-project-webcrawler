@@ -40,10 +40,13 @@ public class WebCrawler implements Crawler {
                 try {
                     Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
                     MyDocument document = new MyDocument(currentWebPage);
-                    save(document);
                     System.out.println("Crawled " + document);
-                    if(document.getCMS().equals("WordPress"))
-                        System.out.println(new WordPressLoginSecurityStats(document));
+                    WordPressLoginSecurityStats stats = null;
+                    if(document.getCMS().equals("WordPress")) {
+                        stats = new WordPressLoginSecurityStats(document);
+                        System.out.println(stats);
+                    }
+                    save(document, stats);
 
                     final Elements linksOnPage = currentWebPage.select("a[href]");
                     for(Element e : linksOnPage) {
@@ -58,8 +61,8 @@ public class WebCrawler implements Crawler {
         System.out.println("Crawl completed!");
     }
 
-    private void save(MyDocument document) {
-        db.addRecord(document.getDocument().location(), document.getDocument().outerHtml(),"", new Date());
+    private void save(MyDocument document, WordPressLoginSecurityStats stats) {
+        db.addRecord(document.getDocument().location(), document.getDocument().outerHtml(),"", new Date(), stats);
     }
 
     @Override

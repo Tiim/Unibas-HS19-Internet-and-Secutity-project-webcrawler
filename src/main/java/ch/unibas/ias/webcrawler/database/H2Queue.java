@@ -11,22 +11,24 @@ public class H2Queue implements UrlQueue {
     private PreparedStatement pushStmt;
     private PreparedStatement existsStmt;
     private PreparedStatement pollStmt;
+    private PreparedStatement setPolledStmt;
     private PreparedStatement countStmt;
+    private PreparedStatement doneCountStmt;
 
-    private int index = 0;
     private DBConnection conn;
 
     public H2Queue(DBConnection conn) {
         this.conn = conn;
         try {
-            pushStmt = conn.newStatement("INSERT INTO queue (url) VALUES (?)");
+            pushStmt = conn.newStatement("INSERT INTO queue (url, crawled) VALUES (?, false)");
             existsStmt = conn.newStatement("SELECT url FROM queue WHERE url = ?");
-            pollStmt = conn.newStatement("SELECT url FROM queue WHERE id = ?");
-            countStmt = conn.newStatement("SELECT count(*) FROM queue");
+            pollStmt = conn.newStatement("SELECT url FROM queue WHERE crawled = false LIMIT 1");
+            setPolledStmt = conn.newStatement("UPDATE queue SET crawled = true WHERE url = ?");
+            countStmt = conn.newStatement("SELECT count(*) FROM queue WHERE crawled = false");
+            doneCountStmt = conn.newStatement("SELECT count(*) FROM queue WHERE crawled = true");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        index = Integer.parseInt(conn.getSetting("queue.index", "0"));
     }
 
     @Override
@@ -41,10 +43,11 @@ public class H2Queue implements UrlQueue {
                 return;
             }
 
+            //System.out.println("Add url " + url + " to queue");
             pushStmt.setString(1, u);
             pushStmt.execute();
         } catch (SQLException e) {
-            e.printStackTrace();
+          System.out.println("Warning: " + e.getMessage());
         }
     }
 
@@ -53,7 +56,7 @@ public class H2Queue implements UrlQueue {
         try {
             ResultSet rs = countStmt.executeQuery();
             rs.next();
-            return rs.getInt(1) - index;
+            return rs.getInt(1);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -62,17 +65,27 @@ public class H2Queue implements UrlQueue {
 
     @Override
     public int crawled() {
-        return index;
+        try {
+            ResultSet rs = doneCountStmt.executeQuery();
+            rs.next();
+            return rs.getInt(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override
     public URL poll() {
-        conn.setSetting("queue.index", String.valueOf(++index));
         try {
-            pollStmt.setInt(1, index);
             ResultSet rs = pollStmt.executeQuery();
             rs.next();
-            return new URL(rs.getString(1));
+            String url = rs.getString(1);
+
+            setPolledStmt.setString(1, url);
+            setPolledStmt.execute();
+
+            return new URL(url);
         } catch (SQLException | MalformedURLException e) {
             e.printStackTrace();
         }
