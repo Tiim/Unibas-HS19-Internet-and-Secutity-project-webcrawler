@@ -10,7 +10,7 @@ public class DBConnection {
 
   public DBConnection() throws Exception {
     Class.forName("org.h2.Driver");
-    connection = DriverManager.getConnection("jdbc:h2:./test", "sa", "");
+    connection = DriverManager.getConnection("jdbc:h2:./test;COMPRESS=TRUE", "sa", "");
     init();
   }
 
