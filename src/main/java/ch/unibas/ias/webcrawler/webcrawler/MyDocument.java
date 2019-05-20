@@ -1,6 +1,7 @@
 package ch.unibas.ias.webcrawler.webcrawler;
 
 import ch.unibas.ias.webcrawler.StringHelper;
+import ch.unibas.ias.webcrawler.analyse.CMSFinder;
 import org.checkerframework.checker.units.qual.C;
 import org.jsoup.nodes.Document;
 
@@ -45,7 +46,9 @@ public class MyDocument {
     }
 
     public String determinCMS() {
-        if( document.outerHtml().contains("wordpress")||
+        CMSFinder myCMSFinder = new CMSFinder(document);
+        return myCMSFinder.getCMSName();
+        /*if( document.outerHtml().contains("wordpress")||
             document.outerHtml().contains("WordPress")||
             document.outerHtml().contains("WORDPRESS")||
             document.outerHtml().contains("word press")||
@@ -62,9 +65,13 @@ public class MyDocument {
             return "Drupal";
         }
         return "?";
+        */
     }
 
     private String findCMSVersion() {
+        CMSFinder myCMSFinder = new CMSFinder(document);
+        return myCMSFinder.getCMSVersion();
+        /*
         if(StringHelper.containsIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"WordPress")) {
             int index = StringHelper.indexOfIgnoreCase(document.outerHtml(),"name=\"generator\" content=\"WordPress");
             index+=36;
@@ -87,6 +94,7 @@ public class MyDocument {
             return document.outerHtml().substring(index, index+3);
         }
         return "?";
+        */
     }
 
     public String getCMSVersion() {
