@@ -1,6 +1,6 @@
 package ch.unibas.ias.webcrawler.analyse;
 
-import ch.unibas.ias.webcrawler.webcrawler.MyDocument;
+import ch.unibas.ias.webcrawler.StringHelper;
 import org.jsoup.nodes.Document;
 
 
@@ -16,44 +16,66 @@ public class CMSFinder {
         this.CMSVersion = this.findCMSVersion();
     }
 
-    public String findCMSVersion() {
+    private String findCMSVersion() {
         String wpString = "name=\"generator\" content=\"WordPress";
-        if (document.outerHtml().contains(wpString)) {
-            int index = document.outerHtml().indexOf(wpString) + wpString.length();
-            String version = document.outerHtml().substring(index, index + 8).replaceAll("[^\\d.]", "");
-            return version;
+
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), wpString)) {
+            int index = document.outerHtml().indexOf(wpString) + wpString.length() + 1;
+            if (Character.isDigit(document.outerHtml().charAt(index))) {
+                String version = document.outerHtml().substring(index, index + 8).replaceAll("[^\\d.]", "");
+                return version;
+            }
         }
         String dpString = "name=\"generator\" content=\"Drupal";
-        if (document.outerHtml().contains(dpString)) {
-            int index = document.outerHtml().indexOf(dpString) + dpString.length();
-            String version = document.outerHtml().substring(index, index + 8).replaceAll("[^\\d.]", "");
-            return version;
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), dpString)) {
+            int index = document.outerHtml().indexOf(dpString) + dpString.length() + 1;
+            if (Character.isDigit(document.outerHtml().charAt(index))) {
+                String version = document.outerHtml().substring(index, index + 8).replaceAll("[^\\d.]", "");
+                return version;
+            }
         }
         String jmString = "name=\"generator\" content=\"Joomla";
-        if (document.outerHtml().contains(jmString)) {
-            int index = document.outerHtml().indexOf(jmString) + jmString.length();
-            String version = document.outerHtml().substring(index, index + 8).replaceAll("[^\\d.]", "");
-            return version;
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), jmString)) {
+            int index = document.outerHtml().indexOf(jmString) + jmString.length() + 1;
+            if (Character.isDigit(document.outerHtml().charAt(index))) {
+                String version = document.outerHtml().substring(index, index + 8).replaceAll("[^\\d.]", "");
+                return version;
+            }
+        }
+        String mwString = "name=\"generator\" content=\"MediaWiki";       //wikipedia etc.
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), mwString)) {
+            int index = document.outerHtml().indexOf(mwString) + mwString.length() + 1;
+            if (Character.isDigit(document.outerHtml().charAt(index))) {
+                String version = document.outerHtml().substring(index, index + 8).replaceAll("[^\\d.]", "");
+                return version;
+            }
         }
 
-        return "-";
+        return "?";
     }
 
-    public String findCMSName() {
+    private String findCMSName() {
         String wpString = "name=\"generator\" content=\"WordPress";
-        if (document.outerHtml().contains(wpString)) {
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), wpString) ||
+                StringHelper.containsIgnoreCase(document.outerHtml(), "https://yoast.com/wordpress/plugins/seo/")) {        //popular plugin
             return "Wordpress";
         }
         String dpString = "name=\"generator\" content=\"Drupal";
-        if (document.outerHtml().contains(dpString)) {
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), dpString)) {
             return "Drupal";
         }
         String jmString = "name=\"generator\" content=\"Joomla";
-        if (document.outerHtml().contains(jmString)) {
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), jmString)) {
             return "Joomla";
         }
+        String mwString = "name=\"generator\" content=\"MediaWiki";       //wikipedia etc.
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), mwString)) {
+            return "MediaWiki";
 
-        return "-";
+        }
+
+
+            return "?";
     }
 
     public String getCMSVersion() {
@@ -62,6 +84,16 @@ public class CMSFinder {
 
     public String getCMSName() {
         return this.CMSName;
+    }
+
+    public static void main(String[] args) {
+        String wpString = "name=\"generator\" content=\"WordPress";
+        String dpString = "name=\"generator\" content=\"Drupal";
+        String jmString = "name=\"generator\" content=\"Joomla";
+
+        System.out.println(wpString.length() + " " + dpString.length() + " " + jmString.length());
+
+
     }
 }
 
