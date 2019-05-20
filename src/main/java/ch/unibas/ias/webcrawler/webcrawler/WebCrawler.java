@@ -36,6 +36,13 @@ public class WebCrawler implements Crawler {
     public static void startUrls(UrlQueue queue) {
         try {
             queue.push(new URL("https://scbirs.ch"));
+            queue.push(new URL("https://reddit.com/r/wordpress"));
+            queue.push(new URL("https://news.ycombinator.com/"));
+            queue.push(new URL("https://dev.to/"));
+            queue.push(new URL("https://github.com/"));
+            queue.push(new URL("https://www.microsoft.com/de-ch"));
+            queue.push(new URL("https://de.wordpress.org/themes/browse/featured/"));
+            queue.push(new URL("https://de.wordpress.org"));
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -51,7 +58,6 @@ public class WebCrawler implements Crawler {
             try {
                 Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
                 MyDocument document = new MyDocument(currentWebPage);
-                System.out.println("Crawled " + document);
                 WordPressLoginSecurityStats stats = null;
                 if(document.getCMS().equals("WordPress")) {
                     stats = new WordPressLoginSecurityStats(document);
@@ -59,11 +65,7 @@ public class WebCrawler implements Crawler {
                 }
                 save(document, stats, document);
 
-                if (loops % 5 == 0 && master) {
-                    System.out.println("========================");
-                    System.out.println("PROGRESS: crawled:" + queue.crawled() + ", left in queue: " + queue.size());
-                    System.out.println("========================");
-                }
+
 
                 final Elements linksOnPage = currentWebPage.select("a[href]");
                 for(Element e : linksOnPage) {
@@ -71,6 +73,14 @@ public class WebCrawler implements Crawler {
                     final URL newURL = new URL(urlText);
                     queue.push(newURL);
                 }
+                System.out.println("Crawled " + document + " links=" + linksOnPage.size());
+
+                if (loops % 5 == 0 && master) {
+                    System.out.println("========================");
+                    System.out.println("PROGRESS: crawled:" + queue.crawled() + ", left in queue: " + queue.size());
+                    System.out.println("========================");
+                }
+
                 loops += 1;
             } catch(Exception e) {
                 System.out.print("");
@@ -104,6 +114,7 @@ public class WebCrawler implements Crawler {
         WebCrawler.startUrls(queue);
         // call with Double.POSITIVE_INFINITY to run infinitely
         final Crawler crawler = new WebCrawler(180000, db, queue, true);
+        crawler.crawl();
 
     }
 }

@@ -7,8 +7,6 @@ import ch.unibas.ias.webcrawler.database.*;
 import ch.unibas.ias.webcrawler.webcrawler.Crawler;
 import ch.unibas.ias.webcrawler.webcrawler.WebCrawler;
 
-import java.net.URL;
-
 public class App {
 
     private static final int THREADS = 30;
@@ -28,6 +26,7 @@ public class App {
 
         Thread[] t = new Thread[THREADS];
 
+
         DBConnection conn = new DBConnection();
         Database db = new H2Database(conn);
 
@@ -35,6 +34,17 @@ public class App {
 
         WebCrawler.startUrls(queue);
 
+        if (queue.size() < 100) {
+            System.out.println("========================");
+            System.out.println("Running with 1 Thread for 30 sec to fill the queue");
+            System.out.println("========================");
+            final Crawler crawler = new WebCrawler(30_000, db, queue, true);
+            crawler.crawl();
+        }
+
+        System.out.println("========================");
+        System.out.println("Running with " + THREADS + " Threads");
+        System.out.println("========================");
         for(int i = 0; i < THREADS; i++) {
             final int index = i;
             t[i] = new Thread(() -> run(db, queue, index));
