@@ -51,22 +51,6 @@ public class WebCrawler implements Crawler {
                         final URL newURL = new URL(urlText);
                         queue.push(newURL);
                     }
-
-                } catch(MalformedURLException e) {
-                    //TODO figure out if this is an issue, malformed URLS happen quite often
-                    //e.printStackTrace();
-                } catch(UnsupportedMimeTypeException e) {
-                    //TODO figure out if this is an issue, UnsupportedMimeType happen quite rarely, seems to happen with pdf
-                    //https://www.unibas.ch/dam/jcr:5a79b475-5fc5-4f16-be03-91b06adfd5c3/AS_MAGAZIN_2018_Web.pdf
-                    //e.printStackTrace();
-                } catch(HttpStatusException e) {
-                    //TODO figure out if this is an issue, HttpStatusException happen quite rarely, happened when accessing:
-                    //https://www.linkedin.com/school/university-of-basel/
-                    //e.printStackTrace();
-                } catch(SocketTimeoutException e) {
-
-                } catch(IOException e) {
-                    //e.printStackTrace();
                 } catch(Exception e) {
                     System.out.print("");
                 }
