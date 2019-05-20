@@ -11,12 +11,13 @@ import java.net.URL;
 
 public class App {
 
-    private static final int THREADS = 3;
+    private static final int THREADS = 30;
+    private static final double RUNTIME = Double.POSITIVE_INFINITY;
 
 
     public static void run(Database db, UrlQueue queue) {
         try {
-            final Crawler crawler = new WebCrawler(180000, db, queue);
+            final Crawler crawler = new WebCrawler(RUNTIME, db, queue);
             crawler.crawl();
         } catch (Exception e) {
 

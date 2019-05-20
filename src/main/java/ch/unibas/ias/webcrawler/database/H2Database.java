@@ -3,7 +3,6 @@ package ch.unibas.ias.webcrawler.database;
 import ch.unibas.ias.webcrawler.webcrawler.MyDocument;
 import ch.unibas.ias.webcrawler.webcrawler.WordPressLoginSecurityStats;
 
-import java.io.StringReader;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -31,7 +30,11 @@ public class H2Database implements Database {
       setStats(insertStmt, stats, myDocument);
       insertStmt.execute();
     } catch (SQLException e) {
-      System.out.println("Warning: " + e.getMessage());
+      if (e.getSQLState().equals("23505")) {
+        System.out.println("Ignoring duplicate url " + url + " not sure how this happened");
+      } else {
+        System.out.println("Warning: " + e.getMessage());
+      }
     }
   }
 
