@@ -46,7 +46,7 @@ public class WebCrawler implements Crawler {
                         stats = new WordPressLoginSecurityStats(document);
                         System.out.println(stats);
                     }
-                    save(document, stats);
+                    save(document, stats, document);
 
                     final Elements linksOnPage = currentWebPage.select("a[href]");
                     for(Element e : linksOnPage) {
@@ -61,8 +61,8 @@ public class WebCrawler implements Crawler {
         System.out.println("Crawl completed!");
     }
 
-    private void save(MyDocument document, WordPressLoginSecurityStats stats) {
-        db.addRecord(document.getDocument().location(), document.getDocument().outerHtml(),"", new Date(), stats);
+    private void save(MyDocument document, WordPressLoginSecurityStats stats, MyDocument myDocument) {
+        db.addRecord(document.getDocument().location(), document.getDocument().outerHtml(),"", new Date(), stats, myDocument);
     }
 
     @Override

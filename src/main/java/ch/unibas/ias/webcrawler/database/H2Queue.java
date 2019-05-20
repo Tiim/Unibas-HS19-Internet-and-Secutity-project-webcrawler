@@ -78,22 +78,48 @@ public class H2Queue implements UrlQueue {
     @Override
     public synchronized URL poll() {
         try {
-            ResultSet rs = pollStmt.executeQuery();
-            rs.next();
+            int backoff = 100;
+            ResultSet rs = null;
+            while (backoff  < 30_000) {
+                rs = pollStmt.executeQuery();
+                if (rs.next()) {
+                    break;
+                } else {
+                    Thread.sleep(backoff);
+                }
+                backoff = 2*backoff;
+            }
             String url = rs.getString(1);
 
             setPolledStmt.setString(1, url);
             setPolledStmt.execute();
 
             return new URL(url);
+
         } catch (SQLException | MalformedURLException e) {
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
         return null;
     }
 
     @Override
     public boolean isEmpty() {
-        return size() == 0;
+        boolean res;
+        int backoff = 100;
+        do {
+            res = size() == 0;
+
+            if (res) {
+                try {
+                    Thread.sleep(backoff);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                backoff *= 2;
+            }
+        } while (res && backoff < 30_000);
+        return res;
     }
 }

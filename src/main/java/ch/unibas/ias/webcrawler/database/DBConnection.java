@@ -25,6 +25,8 @@ public class DBConnection {
             "header VARCHAR(2048)," +
             "date TIMESTAMP," +
             // Stats:
+            "cms VARCHAR(50)," +
+            "version VARCHAR(50)," +
             "stat_wp_admin BOOLEAN," +
             "stat_strong_password BOOLEAN," +
             "stat_humanity BOOLEAN," +
