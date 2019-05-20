@@ -85,7 +85,7 @@ public class WebCrawler implements Crawler {
 
         try {
           // call with Double.POSITIVE_INFINITY to run infinitely
-          final Crawler crawler = new WebCrawler(new URL("https://www.themes.stashfamily.com/"),180000, db, queue);
+          final Crawler crawler = new WebCrawler(new URL("https://dictionary-api.cambridge.org/"),180000, db, queue);
 
         } catch (IOException e) {
             e.printStackTrace();

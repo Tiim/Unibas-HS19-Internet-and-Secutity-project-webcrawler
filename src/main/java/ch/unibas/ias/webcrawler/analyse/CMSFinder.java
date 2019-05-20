@@ -71,9 +71,11 @@ public class CMSFinder {
         String mwString = "name=\"generator\" content=\"MediaWiki";       //wikipedia etc.
         if (StringHelper.containsIgnoreCase(document.outerHtml(), mwString)) {
             return "MediaWiki";
-
         }
-
+        String sfString = "id=\"shopify-digital-wallet\" name=\"shopify-digital-wallet";
+        if (StringHelper.containsIgnoreCase(document.outerHtml(), sfString)) {
+            return "Shopify";
+        }
 
             return "?";
     }
@@ -86,14 +88,5 @@ public class CMSFinder {
         return this.CMSName;
     }
 
-    public static void main(String[] args) {
-        String wpString = "name=\"generator\" content=\"WordPress";
-        String dpString = "name=\"generator\" content=\"Drupal";
-        String jmString = "name=\"generator\" content=\"Joomla";
-
-        System.out.println(wpString.length() + " " + dpString.length() + " " + jmString.length());
-
-
-    }
 }
 
