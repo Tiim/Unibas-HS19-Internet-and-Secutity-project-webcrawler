@@ -15,9 +15,9 @@ public class App {
     private static final double RUNTIME = Double.POSITIVE_INFINITY;
 
 
-    public static void run(Database db, UrlQueue queue) {
+    public static void run(Database db, UrlQueue queue, int index) {
         try {
-            final Crawler crawler = new WebCrawler(RUNTIME, db, queue);
+            final Crawler crawler = new WebCrawler(RUNTIME, db, queue, index == 0);
             crawler.crawl();
         } catch (Exception e) {
 
@@ -36,7 +36,8 @@ public class App {
         WebCrawler.startUrls(queue);
 
         for(int i = 0; i < THREADS; i++) {
-            t[i] = new Thread(() -> run(db, queue));
+            final int index = i;
+            t[i] = new Thread(() -> run(db, queue, index));
             t[i].start();
         }
 

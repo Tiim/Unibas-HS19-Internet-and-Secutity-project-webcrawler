@@ -21,12 +21,14 @@ public class WebCrawler implements Crawler {
     //inventory of all links visited
     private final Database db;
     private final UrlQueue queue;
+    private final boolean master;
     private final double runtime;
     private final long startTime;
 
-    public WebCrawler(final double runtime, Database db, UrlQueue queue) {
+    public WebCrawler(final double runtime, Database db, UrlQueue queue, boolean master) {
         this.db = db;
         this.queue = queue;
+        this.master = master;
         this.startTime = System.currentTimeMillis();
         this.runtime = runtime;
     }
@@ -43,28 +45,37 @@ public class WebCrawler implements Crawler {
     @Override
     public void crawl() {
 
-            while (!queue.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
-                try {
-                    Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
-                    MyDocument document = new MyDocument(currentWebPage);
-                    System.out.println("Crawled " + document);
-                    WordPressLoginSecurityStats stats = null;
-                    if(document.getCMS().equals("WordPress")) {
-                        stats = new WordPressLoginSecurityStats(document);
-                        System.out.println(stats);
-                    }
-                    save(document, stats, document);
+        int loops = 0;
 
-                    final Elements linksOnPage = currentWebPage.select("a[href]");
-                    for(Element e : linksOnPage) {
-                        final String urlText = e.attr("abs:href");
-                        final URL newURL = new URL(urlText);
-                        queue.push(newURL);
-                    }
-                } catch(Exception e) {
-                    System.out.print("");
+        while (!queue.isEmpty() && (System.currentTimeMillis()-startTime)<runtime) {
+            try {
+                Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
+                MyDocument document = new MyDocument(currentWebPage);
+                System.out.println("Crawled " + document);
+                WordPressLoginSecurityStats stats = null;
+                if(document.getCMS().equals("WordPress")) {
+                    stats = new WordPressLoginSecurityStats(document);
+                    System.out.println(stats);
                 }
+                save(document, stats, document);
+
+                if (loops % 5 == 0 && master) {
+                    System.out.println("========================");
+                    System.out.println("PROGRESS: crawled:" + queue.crawled() + ", left in queue: " + queue.size());
+                    System.out.println("========================");
+                }
+
+                final Elements linksOnPage = currentWebPage.select("a[href]");
+                for(Element e : linksOnPage) {
+                    final String urlText = e.attr("abs:href");
+                    final URL newURL = new URL(urlText);
+                    queue.push(newURL);
+                }
+                loops += 1;
+            } catch(Exception e) {
+                System.out.print("");
             }
+        }
         System.out.println("Crawl completed!");
     }
 
@@ -92,7 +103,7 @@ public class WebCrawler implements Crawler {
 
         WebCrawler.startUrls(queue);
         // call with Double.POSITIVE_INFINITY to run infinitely
-        final Crawler crawler = new WebCrawler(180000, db, queue);
+        final Crawler crawler = new WebCrawler(180000, db, queue, true);
 
     }
 }
