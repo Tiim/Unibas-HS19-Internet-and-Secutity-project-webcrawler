@@ -21,7 +21,6 @@ public class DBConnection {
     String tablePage = "CREATE TABLE IF NOT EXISTS page (" +
             "id IDENTITY auto_increment PRIMARY KEY," +
             "url VARCHAR(500) UNIQUE," +
-            "html CLOB," +
             "header VARCHAR(2048)," +
             "date TIMESTAMP," +
             // Stats:
