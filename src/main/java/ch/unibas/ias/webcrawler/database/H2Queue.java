@@ -32,7 +32,7 @@ public class H2Queue implements UrlQueue {
     }
 
     @Override
-    public void push(URL url) {
+    public synchronized void push(URL url) {
         String u = url.toString();
         try {
             existsStmt.setString(1, u);
@@ -76,7 +76,7 @@ public class H2Queue implements UrlQueue {
     }
 
     @Override
-    public URL poll() {
+    public synchronized URL poll() {
         try {
             ResultSet rs = pollStmt.executeQuery();
             rs.next();

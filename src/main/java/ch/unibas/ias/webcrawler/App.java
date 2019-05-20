@@ -7,7 +7,7 @@ import ch.unibas.ias.webcrawler.webcrawler.WebCrawler;
 
 public class App {
 
-    private static final int THREADS = 5;
+    private static final int THREADS = 30;
 
 
     public static void run(String[] args) {
