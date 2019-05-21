@@ -40,7 +40,7 @@ public class H2Database implements Database {
       insertStmt.execute();
     } catch (SQLException e) {
       if (e.getSQLState().equals("23505")) {
-        System.out.println("Ignoring duplicate url " + url + " not sure how this happened");
+        //System.out.println("Ignoring duplicate url " + url + " not sure how this happened");
       } else {
         System.out.println("Warning: " + e.getMessage());
       }

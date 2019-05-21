@@ -74,13 +74,13 @@ public class WebCrawler implements Crawler {
                     final URL newURL = new URL(urlText);
                     queue.push(newURL);
                 }
-                System.out.println("Crawled " + document + " links=" + linksOnPage.size());
+                //System.out.println("Crawled " + document + " links=" + linksOnPage.size());
 
 
                 if (loops % 5 == 0 && master) {
-                    System.out.println("========================");
+                    //System.out.println("========================");
                     System.out.println("PROGRESS: crawled:" + queue.crawled() + ", left in queue: " + queue.size());
-                    System.out.println("========================");
+                    //System.out.println("========================");
                 }
 
                 loops += 1;
@@ -88,7 +88,7 @@ public class WebCrawler implements Crawler {
                 System.out.print("");
             }
         }
-        System.out.println("Crawl completed!");
+        //System.out.println("Crawl completed!");
     }
 
     private void save(MyDocument document, WordPressLoginSecurityStats stats, WordPressDangerousPlugins plugs, MyDocument myDocument) {
