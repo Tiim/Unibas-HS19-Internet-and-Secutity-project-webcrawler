@@ -19,6 +19,7 @@ Wp Version ?	  6531
 
 WpAdmin hidden	  4526
 WpAdmin !hidden  18362
+WpAdmin not sec	 12286
 WpAdmin Sec Mesu  6076
 
 Uses bad plugin  14612
