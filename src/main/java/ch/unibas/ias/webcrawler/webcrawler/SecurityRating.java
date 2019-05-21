@@ -3,15 +3,21 @@ package ch.unibas.ias.webcrawler.webcrawler;
 public class SecurityRating {
 
 
-
+//the higher the startvalue, the worse ... high = bad, low = good
     public static int calculate(MyDocument document, WordPressLoginSecurityStats stats, WordPressDangerousPlugins plugs) {
         int startvalue = 0;
         if(!document.getCMS().equals("?")) {
             startvalue++;
         }
 
-        if(!document.getCMS().equals("?")) {
+        if(!document.getCMSVersion().equals("?")) {
             startvalue++;
+        }
+
+        if(document.getCMSVersion().startsWith("3")||document.getCMSVersion().startsWith("2")||document.getCMSVersion().startsWith("1")) {
+            startvalue+=5;
+        } else if(document.getCMSVersion().startsWith("4")) {
+            startvalue+=1;
         }
 
         if(stats.getCanAccessAdminLogin()) {
