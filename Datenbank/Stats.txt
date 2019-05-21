@@ -1,0 +1,43 @@
+Gesammt in db:	134979
+
+CMS ?			101259
+
+CMS erkannt		 33720
+
+Cms: Wordpress	 22888
+Cms: Shopify	   479
+Cms: Drupal		  6128
+Cms: Joomla		  1434
+Cms: MediaWiki	  2791
+
+Cms: Wordpress	 22888
+Wp 5...			  9139
+Wp 4...			  6854
+Wp 3..			   323
+Wp < 3				39
+Wp Version ?	  6531
+
+WpAdmin hidden	  4526
+WpAdmin !hidden  18362
+WpAdmin Sec Mesu  6076
+
+Uses bad plugin  14612
+
+
+
+Security Rating >= 10	20499
+
+
+
+
+--------------------------------------------
+CMS != '?' AND CMS != 'Wordpress' AND CMS != 'Shopify' AND CMS != 'Drupal' AND CMS != 'MediaWiki' AND CMS != 'Joomla'
+
+VERSION >= '4' AND VERSION < '5'
+
+CMS = 'Wordpress' AND 
+	STAT_WP_ADMIN = True AND (
+	STAT_STRONG_PASSWORD = True OR
+	STAT_HUMANITY = True OR
+	STAT_JETPACK = True OR
+	STAT_RECAPTCHA = True)
