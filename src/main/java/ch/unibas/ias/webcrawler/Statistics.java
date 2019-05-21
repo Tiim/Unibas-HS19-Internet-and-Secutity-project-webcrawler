@@ -32,7 +32,22 @@ public class Statistics {
     countWordpressPlugins();
     queueLength();
     countCMS();
+    rating();
+  }
 
+  private void rating() throws SQLException {
+    try(CSV c = new CSV("rating")) {
+
+      ResultSet rs = connection.newStatement("SELECT security_rating, count(*) as c FROM page WHERE cms LIKE 'Wordpress' GROUP BY security_rating ORDER BY security_rating DESC").executeQuery();
+      c.write("rating", "count");
+
+      while (rs.next()) {
+        c.write(rs.getString(1), rs.getInt(2));
+      }
+
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   private void countCMS() throws SQLException {
