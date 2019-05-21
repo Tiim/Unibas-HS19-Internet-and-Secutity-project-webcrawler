@@ -1,0 +1,1077 @@
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.isOnValidRow(JdbcResultSet.java:3219)
+	at org.h2.jdbc.JdbcResultSet.checkOnValidRow(JdbcResultSet.java:3223)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.isOnValidRow(JdbcResultSet.java:3219)
+	at org.h2.jdbc.JdbcResultSet.checkOnValidRow(JdbcResultSet.java:3223)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.isOnValidRow(JdbcResultSet.java:3219)
+	at org.h2.jdbc.JdbcResultSet.checkOnValidRow(JdbcResultSet.java:3223)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 06:44:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 06:44:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 06:44:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500)": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=499b84ac-1321-427f-aa17-267ca6975798&site_id=501446&respons... (614)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:46:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500)": "'https://www.oreilly.com/member/login/?next=%2Fapi%2Fv1%2Fauth%2Fopenid%2Fauthorize%3Fredirect_uri%3Dhttps%3A%2F%2Flearning.orei... (1032)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:47:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://smile.amazon.com/ap/signin/140-7629870-1717725?_encoding=UTF8&openid.assoc_handle=amzn_smile&openid.claimed_id=http%3A%... (584)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:48:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1558414101&rver=7.1.6819.0&wp=MBI_SSL&wreply=https%3A%2F%2Flw.skype.... (567)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:48:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=c7d28c4f-0d2c-49d6-a88d-a275cc5473c7&redirect_uri=https%3a%... (683)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:49:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://idp.unibo.it/adfs/ls/?SAMLRequest=fZFRT8IwFIX%2FytJ36DoGkYYtmfAgCSph0wdfTLfeSZOunb2d6L93MA34IK%2Ftud8599wFika3POv83uzgv... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:55:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (522)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:55:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/fd5be9d9-7b72-4df9-830e-b1f9cc5b44bd/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (550)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:56:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://adfs.fiu.edu/adfs/ls/?client-request-id=683b6790-5c9a-44e7-b76f-f45daa316477&username=&wa=wsignin1.0&wtrealm=urn%3afede... (805)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:57:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "1" for parameter "columnIndex" [90008-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3197)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3229)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-05-21 06:58:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://auth.woot.com/ap/signin?openid.ns=http%3a%2f%2fspecs.openid.net%2fauth%2f2.0&openid.identity=http%3a%2f%2fspecs.openid.... (789)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:58:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.dpreview.com/ap/signin?openid.return_to=https%3A%2F%2Flogin.dpreview.com%2Fpost-login%3FreturnUrl%3D687474703a2f2... (529)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:59:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.oracle.com:443/oam/server/obrareq.cgi?encquery%3DlxcHww8fZF%2BnbFfbPstJbVTlRW3R%2BXsC44gINNoO%2BtqSRzWXKx73Uaxc73... (620)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 06:59:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://atlassian.my.centrify.com/login?yfirtnecapplogin=true&appKey=a1c3a965-100a-4d4f-9fdd-98ef57bc5cd4&customerId=AAS0641&=&... (553)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:01:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://auth.documentfoundation.org/saml/singleSignOn?SAMLRequest=pVLLbsIwELzzFZXvEIcCoRYgUegDiQIqtIde0OIsYCmxU6%2Fdx9%2FXJH1L5... (698)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:03:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.immerda.ch/login/saml?SAMLRequest=lVhZj6NI1v0rKdVDPlhZgFlsUlUlBYsxZjE7hpcRS7CYzWaHX%2F85M7urs%2BqbnumRLOS4ce%2BNE... (4086)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:03:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.immerda.ch/login/saml?SAMLRequest=lVhZj6NItv4rKdVDPlhZLAYMqaqSgh0bbHYMLyN2MBgwO%2Fz6S2Z2V2fVnZ7pkSzkiDjnxBdn%2BTj... (4106)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:15:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.vortx.com/account/login?ReturnUrl=%2Fauthorize%3Fclient_id%3Dadnsf.license%26redirect_uri%3Dhttps%253a%252f%25... (580)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:15:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.vortx.com/account/login?ReturnUrl=%2Fauthorize%3Fclient_id%3Dadnsf.license%26redirect_uri%3Dhttps%253a%252f%25... (580)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:15:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.vortx.com/account/login?ReturnUrl=%2Fauthorize%3Fclient_id%3Dadnsf.license%26redirect_uri%3Dhttps%253a%252f%25... (580)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:15:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.vortx.com/account/login?ReturnUrl=%2Fauthorize%3Fclient_id%3Dadnsf.license%26redirect_uri%3Dhttps%253a%252f%25... (580)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:15:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.vortx.com/account/login?ReturnUrl=%2Fauthorize%3Fclient_id%3Dadnsf.license%26redirect_uri%3Dhttps%253a%252f%25... (580)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/489933a0-c467-4b28-acaf-53c3c5cce4ab/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (565)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:21:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://eei-federate.umflint.edu/authenticationendpoint/login.do?RelayState=4dcc0e72-86a3-44b0-9b17-fa7d477fe800&SigAlg=http%3A... (1196)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:21:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://eei-federate.umflint.edu/authenticationendpoint/login.do?RelayState=4dcc0e72-86a3-44b0-9b17-fa7d477fe800&SigAlg=http%3A... (1196)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:23:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.ebu.ch:443/auth/XUI/#login/&realm=/&forward=true&spEntityID=https%3A%2F%2Fnews-exchange.ebu.ch%2F&goto=%2FSSOPOST%2... (505)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:23:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.ebu.ch:443/auth/XUI/#login/&realm=/&forward=true&spEntityID=https%3A%2F%2Fnews-exchange.ebu.ch%2F&goto=%2FSSOPOST%2... (505)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:23:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.ebu.ch:443/auth/XUI/#login/&realm=/&forward=true&spEntityID=https%3A%2F%2Fnews-exchange.ebu.ch%2F&goto=%2FSSOPOST%2... (505)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:31:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://platform.spgi.spglobal.com/web/client?auth=inherit&bmctx=1305DE25F219961752D2443C2563A499&contextType=external&username... (520)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:31:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 07:32:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 07:32:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 07:33:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 07:33:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.isOnValidRow(JdbcResultSet.java:3219)
+	at org.h2.jdbc.JdbcResultSet.checkOnValidRow(JdbcResultSet.java:3223)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 07:33:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 07:33:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 07:33:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 07:33:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://auth.launchpad.nasa.gov:443/kv/unauth/iwa20.fcc?TYPE=33554432&REALMOID=06-ddd2fa5d-cea6-41a8-8ed8-876dd945477a&GUID=&SM... (1182)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:33:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://auth.launchpad.nasa.gov:443/kv/unauth/iwa20.fcc?TYPE=33554432&REALMOID=06-ddd2fa5d-cea6-41a8-8ed8-876dd945477a&GUID=&SM... (1182)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://fiu.service-now.com/auth_redirect.do?sysparm_url=https%3A%2F%2Fadfs.fiu.edu%2Fadfs%2Fls%2F%3FSAMLRequest%3DjVLLTsMwEPyV... (709)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:37:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 07:39:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (518)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:41:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.mayoclinic.org/adfs/ls/?SAMLRequest=lZLNagIxFEb3hb5DyF6T2EnHCTOKaBeChWJLF93FJGromGhuRtq3b8aftggtuM3Hd8%2B54ZbDj02... (917)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:45:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=pa_inbound&redirect_uri=https%3A%2F%2Fmycas... (677)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:49:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://solvnet.synopsys.com/new_signin.jsp?fromURI=https%3A%2F%2Fsolvnet.okta.com%2Fapp%2Fsolvnetsynopsysexternalprod_solvnet_... (760)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:49:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://solvnet.synopsys.com/new_signin.jsp?fromURI=https%3A%2F%2Fsolvnet.okta.com%2Fapp%2Fsolvnetsynopsysexternalprod_solvnet_... (760)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:49:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://solvnet.synopsys.com/new_signin.jsp?fromURI=https%3A%2F%2Fsolvnet.okta.com%2Fapp%2Fsolvnetsynopsysexternalprod_solvnet_... (788)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:50:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sellercentral.amazon.com.br:443/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fsellercentral.amazo... (882)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:54:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.sap.com/saml2/idp/sso/accounts.sap.com?SAMLRequest=fZHNasMwEIRfxTedHDkmTmphG0xCIZCWkrQ99FJUeU1EZUnVrvvz9rUT2iY... (951)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:57:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/589c76f5-ca15-41f9-884b-55ec15a0672a/saml2?SAMLRequest=fZJBb9swDIXv%2FRWG7rItx4pjIQmQNRgWoFuD... (1073)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:58:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://weblogin.med.umich.edu:443/nidp/saml2/sso?SAMLRequest=fZFRS8MwFIX%2fSsh7m7Rrtxq6wtgQCiqi4oNvWXrrAm1ScxOn%2f960e1Jhr4dz7... (528)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://adfs.ad.cornell.edu/adfs/ls/?client-request-id=e5ef282e-a7c9-4ff5-add7-918790b38d53&username=&wa=wsignin1.0&wtrealm=urn... (853)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://adfs.ad.cornell.edu/adfs/ls/?client-request-id=e5ef282e-a7c9-4ff5-add7-918790b38d53&username=&wa=wsignin1.0&wtrealm=urn... (853)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web3.login.cornell.edu:443/?SID=E136C35DE3F1A4BD&WAK0Service=HTTP/nubb.cornell.edu@CIT.CORNELL.EDU&WAK2Name=&WAK0Realms... (628)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web2.login.cornell.edu:443/?SID=9B8FC893971E7D7C&WAK0Service=https/itservicealerts.hosting.cornell.edu@CIT.CORNELL.EDU&... (562)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web2.login.cornell.edu:443/?SID=9B8FC893971E7D7C&WAK0Service=https/itservicealerts.hosting.cornell.edu@CIT.CORNELL.EDU&... (562)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web4.login.cornell.edu:443/?SID=30D7A7512518EA3C&WAK0Service=https/itservicealerts.hosting.cornell.edu@CIT.CORNELL.EDU&... (562)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web1.login.cornell.edu:443/?SID=9B159E637578F6A6&WAK0Service=https/nelnetlogin.hosting.cornell.edu@CIT.CORNELL.EDU&WAK2... (568)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 07:59:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web1.login.cornell.edu:443/?SID=9B159E637578F6A6&WAK0Service=https/nelnetlogin.hosting.cornell.edu@CIT.CORNELL.EDU&WAK2... (568)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:03:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 08:04:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 08:29:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (522)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:29:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://idp.unibo.it/adfs/ls/?SAMLRequest=fZJdT4MwFIb%2FCuk9X90woxkkuF24ZCoZ6IU3ppSDNIEWe4rTfy8OP%2BbNLtu%2Bfd7TJ10j77uBZaNt1QF... (963)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:29:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://idp.unibo.it/adfs/ls/?SAMLRequest=fZJdT4MwFIb%2FCuk9X90woxkkuF24ZCoZ6IU3ppSDNIEWe4rTfy8OP%2BbNLtu%2Bfd7TJ10j77uBZaNt1QF... (963)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:29:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://idp.unibo.it/adfs/ls/?SAMLRequest=fZHNTsMwEIRfJfK98U9J1VhNpNAeqFQgagIHLshJXGrJsYPXofD2pA2o5UCv9uw3s7MLEK3ueNb7vdnK916CD... (1122)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:32:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=4345a7b9-9a63-4910-a426-35363201d503&response_mode=form_pos... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:35:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 08:48:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://adfs.pucrs.br/adfs/ls/?client-request-id=d9bc3be8-ff6d-41ba-bc77-96ae92a43a17&username=&wa=wsignin1.0&wtrealm=urn%3afed... (804)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:48:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://adfs.pucrs.br/adfs/ls/?client-request-id=d9bc3be8-ff6d-41ba-bc77-96ae92a43a17&username=&wa=wsignin1.0&wtrealm=urn%3afed... (804)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:49:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://smile.amazon.com/ap/signin/131-2783289-6911316?_encoding=UTF8&openid.assoc_handle=amzn_smile&openid.claimed_id=http%3A%... (584)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:49:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://smile.amazon.com/ap/signin/131-2783289-6911316?_encoding=UTF8&openid.assoc_handle=amzn_smile&openid.claimed_id=http%3A%... (584)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:51:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://id.siteimprove.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Flogin%3Fclient_id%3Dmy2%26redirect_uri%3Dhttps%253A... (802)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:53:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/75bc3577-9837-4a13-b006-0d0b372d8ab7/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:53:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/75bc3577-9837-4a13-b006-0d0b372d8ab7/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:53:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/9dfb1a05-5f1d-449a-8960-62abcb479e7d/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/a10e483f-b4a2-4f12-9ae2-254a11c834b3/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (554)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:56:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/3f67dd9c-9e49-416b-91c1-454c797f62f7/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 08:56:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://claim.infrabel.be/adfs/ls/?SAMLRequest=jZJdT8IwFIb%2FytJ7aDcGSMNIJsRIgkoAvfDGnJUzadK1s6fz4987QCPcEK%2F79nnPedoxQWVqmTdh... (521)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:00:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000006-0000-0ff1-ce00-000000000000&response_mode=form_pos... (655)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:01:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://rambus.my.salesforce.com/saml/authn-request.jsp?saml_request_id=_2CAAAAWtpY8wSME8wMlQwMDAwMDA4T0k1AAAA2lCRCRAc9bWnI2zsY... (507)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:01:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://umd.service-now.com/auth_redirect.do?sysparm_url=https%3A%2F%2Fshib.idm.umd.edu%2Fshibboleth-idp%2Fprofile%2FSAML2%2FRe... (1091)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:01:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://account.arm.com/1eb62d43-db15-492b-beab-8a32f6d90351/b2c_1a_support.susi/oauth2/v2.0/authorize?client_id=9bcc7456-aa96-... (741)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:02:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=wam_prod_ac&redirect_uri=https%3A%2F%2Frpfa... (678)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:02:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=wam_prod_ac&redirect_uri=https%3A%2F%2Frpfa... (678)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:02:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=wam_prod_ac&redirect_uri=https%3A%2F%2Frpfa... (678)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:11:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://uxxisso.upm.es:443/oam/server/obrareq.cgi?encquery%3DmGTJPUcV%2BMRTvYlu88Nw55bnV4kCLHazwNShDc7AY42x5f4%2F6jRwg0SdY2t46F... (512)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:11:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://uxxisso.upm.es:443/oam/server/obrareq.cgi?encquery%3DmGTJPUcV%2BMRTvYlu88Nw55bnV4kCLHazwNShDc7AY42x5f4%2F6jRwg0SdY2t46F... (512)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/saml2/idp?from_login%3D1%26zt%3... (559)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/saml2/idp?from_login%3D1%26zt%3... (559)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/saml2/idp?from_login%3D1%26zt%3... (559)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:15:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://idp.quicklaunchsso.com/authenticationendpoint/login.do?commonAuthCallerPath=%2Fpassivests&forceAuth=false&passiveAuth=f... (596)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:15:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://idp.quicklaunchsso.com/authenticationendpoint/login.do?commonAuthCallerPath=%2Fpassivests&forceAuth=false&passiveAuth=f... (596)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:22:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.med.harvard.edu/adfs/ls/?client-request-id=149fbeec-7393-4ba2-b514-84f3953b5796&username=&wa=wsignin1.0&wtrealm=urn... (830)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=4345a7b9-9a63-4910-a426-35363201d503&response_mode=form_pos... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:27:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/23aa92c0-ac71-491d-81da-881f704369aa/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (556)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:34:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 09:40:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://fs.swin.edu.au/adfs/ls/?SAMLRequest=fZJLb4MwEIT%2FCvIdDDQvrIBEk0MjpS0KtIdeKoOdYsnY1Gs37b8vCX0kl5x3dmb20y6BdrInubOt2vF3x... (569)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:40:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://fs.swin.edu.au/adfs/ls/?SAMLRequest=fZJLb4MwEIT%2FCvIdDDQvrIBEk0MjpS0KtIdeKoOdYsnY1Gs37b8vCX0kl5x3dmb20y6BdrInubOt2vF3x... (569)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 09:40:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/df7f7579-3e9c-4a7e-b844-420280f53859/saml2?SAMLRequest=fZJLb8IwEITv%2FRWR786LkIdFIlFQVaQ%2BEN... (609)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 10:00:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.google.com/ServiceLogin?service=ah&passive=true&continue=https://appengine.google.com/_ah/conflogin%3Fcontinue... (1387)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 10:20:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 10:36:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 10:36:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://onepass.regions.com:443/oaam_server/oamLoginPage.jsp?TapSubmitURL=https%3A%2F%2Fonepass.regions.com%2Foam%2Fserver%2Fda... (1120)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 10:43:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'http://sso.jnu.ac.in:8080/JNUSSO/index.jsp?SAMLRequest=fVLJTsMwEL0j8Q%2BW79nKIrCaVAWEqMQS0cCBm%2BNMWhMvxeO08Pe4KQg40Ovzm7eMZzx5... (799)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:08:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://platform.spgi.spglobal.com/web/client?auth=inherit&bmctx=1305DE25F219961752D2443C2563A499&contextType=external&username... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:08:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://platform.spgi.spglobal.com/web/client?auth=inherit&bmctx=1305DE25F219961752D2443C2563A499&contextType=external&username... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:08:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://platform.spgi.spglobal.com/web/client?auth=inherit&bmctx=1305DE25F219961752D2443C2563A499&contextType=external&username... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:08:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://platform.spgi.spglobal.com/web/client?auth=inherit&bmctx=1305DE25F219961752D2443C2563A499&contextType=external&username... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:08:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://adfs.uky.edu/adfs/ls/?SAMLRequest=rZJBT%2BMwEIXv%2FIrI98SJSUqxmqDuIgQSK6o2gMRlNU2mW4vEDh67Xfj1pOlWZS89cbJmNG%2Fesz9Prv6... (610)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:17:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "1" for parameter "columnIndex" [90008-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3197)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3229)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-05-21 11:18:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 11:23:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://mylogin.unh.edu/secureauth4/?SAMLRequest=fVLNT8IwFL%2F7Vyy975Oh0gwShBhJUBeYHryYrn1Ak63Fvlblv7cbavAg19f3%2B3wtkLXNnk6d3a... (533)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:23:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://mylogin.unh.edu/SecureAuth5/?SAMLRequest=rZLNbtswEITveQqBd4mSbEcWYSlwGwQJkCCGLbdALwVDrWMC%2FFG4pJ3k6SvJNZr2kFNPxC52dgb7... (633)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:29:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.utexas.edu/login/SSORedirect/metaAlias/utaustin/idp?SAMLRequest=fVNLb9swDL7vVxi6%2BxFnaVohCZAlGBagXY3Y22GXQZHpVoA... (684)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:32:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/ac79e5a8-e0e4-434b-a292-2c89b5c28366/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:40:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000006-0000-0ff1-ce00-000000000000&response_mode=form_pos... (655)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:41:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://account.thesun.co.uk/login?state=g6Fo2SA4MUJYVW5JbDg4eHVLQmo0MF9lcng4YXhKRHVfNWluNKN0aWTZIG4zLTJPQUZzSG5kUlcxWUFWZ3hhS0... (967)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:49:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://webauth.ox.ac.uk/login?RT=XOPJo0jFpTd7myy%20xKAZjzULVjV9GNRcjdj5WHY3lMdghOn1VRefM%2FpwW2KdenkTIEzFo6BPiM4ydhBHwbYk2tzLq... (550)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 11:53:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://stanford.service-now.com/auth_redirect.do?sysparm_url=https%3A%2F%2Fidp.stanford.edu%2Fidp%2Fprofile%2FSAML2%2FRedirect... (793)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:09:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://aquasec.auth0.com/login?state=g6Fo2SB3Zjl4SzZZTGJjcm9XV3pxWmVPZjFFblZYT2pPV3VLMqN0aWTZIElZUm1tLWd5NllKNVZVd2trSFZXVFJNS... (725)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://live-identityservice-gooroo.azurewebsites.net/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DG... (790)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:21:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=wam_prod_ac&redirect_uri=https%3A%2F%2Fslex... (684)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:21:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=wam_prod_ac&redirect_uri=https%3A%2F%2Fslex... (684)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:21:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=wam_prod_ac&redirect_uri=https%3A%2F%2Fslex... (684)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:21:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cloudsso.cisco.com:443/as/authorization.oauth2?response_type=code&client_id=wam_prod_ac&redirect_uri=https%3A%2F%2Fslex... (684)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:26:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/fcbfc6fa-e20b-4a1d-b629-1b8e17697dbc/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (559)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:31:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sellercentral.amazon.com.br:443/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fsellercentral.amazo... (883)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:31:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sellercentral.amazon.com.br:443/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fsellercentral.amazo... (883)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.us2.oraclecloud.com:443/oam/server/obrareq.cgi?encquery%3DEyvXE40v53HZORog1IIOhMPziSBtZrFcijgYoNdBUKxSzcEOpndtyk4... (510)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:48:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sts.tue.nl/adfs/ls/?SAMLRequest=fZFNT4MwGMe%2FCul9lOFGoBkkuB1cMpUM9ODFFHiQJqXFPsWXby8bTufBnft%2Fe35dIe9kz9LBtmoPrwOgdT4... (518)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:49:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sts.uic.edu/adfs/ls/?client-request-id=ba22db68-acee-4b6f-b4c3-c13593071aaf&username=&wa=wsignin1.0&wtrealm=urn%3afeder... (802)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 12:49:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://engine.surfconext.nl/authentication/idp/single-sign-on/key:20181213?SAMLRequest=fZJNU8IwEIb%2FSif3Nm1ApBnKDMpBZvxgAD14c... (647)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:05:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://accounts.sap.com/saml2/idp/sso/accounts.sap.com?SAMLRequest=fZLRboIwFIbv9xSk91BgotIIxs2YmbiMKNvFbpZSijaBFntassefwszcknn... (591)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:09:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (583)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://secure.uva.nl/cas/login?service=https%3A%2F%2Fsecure.uva.nl%2Fcas%2Fidp%2Fprofile%2FSAML2%2FPOST%2FSSO%2FCallback.%2B%3... (1248)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:17:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://identity.trimble.com/i/authenticationendpoint/login.do?RelayState=https%3A%2F%2Fmytrimbleprotected.com%2Fsaml%2Fsignin&... (838)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:21:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.rackspace.com/?next=%2Fsso%2Fv2%2Fauthdone&SAMLRequest=nZJLT8MwEITv%2FArLd%2BdhhdJaTVChQlTiUbUBCS7IdbbFwrGD1yn03x... (1048)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://cp.rackspace.com/identity/Account/Login?ReturnUrl=%2Fidentity%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dcp3%26redi... (708)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:24:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (582)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:25:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/e6435811-18b2-4b9d-afa6-2d8e274d17aa/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:25:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web3.login.cornell.edu:443/?SID=725173CE20B50D3F&WAK0Service=https/intranet.business.cornell.edu@CIT.CORNELL.EDU&WAK2Na... (569)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:25:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web2.login.cornell.edu:443/?SID=2CA5D52D6604893C&WAK0Service=https/staff.dpb.cornell.edu@CIT.CORNELL.EDU&WAK2Name=&WAK0... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:25:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web2.login.cornell.edu:443/?SID=2CA5D52D6604893C&WAK0Service=https/staff.dpb.cornell.edu@CIT.CORNELL.EDU&WAK2Name=&WAK0... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:25:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web2.login.cornell.edu:443/?SID=2CA5D52D6604893C&WAK0Service=https/staff.dpb.cornell.edu@CIT.CORNELL.EDU&WAK2Name=&WAK0... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:25:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/5d7e4366-1b9b-45cf-8e79-b14b27df46e1/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (554)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:25:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web2.login.cornell.edu:443/?SID=1E44C0A2401EB08C&WAK0Service=https/kfs-prod.adminapps.cornell.edu@CIT.CORNELL.EDU&WAK2N... (598)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:26:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web1.login.cornell.edu:443/?SID=C4AF9C75B281E116&WAK0Service=https/rmps-prod.hosting.cornell.edu@CIT.CORNELL.EDU&WAK2Na... (551)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web3.login.cornell.edu:443/?SID=67280AAC63EE1298&WAK0Service=https/staff-zone.ccmr.cornell.edu@CIT.CORNELL.EDU&WAK2Name... (628)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:27:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web4.login.cornell.edu:443/?SID=AC9016C10B726576&WAK0Service=https/portal.research.cornell.edu@CIT.CORNELL.EDU&WAK2Name... (590)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:28:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://web1.login.cornell.edu:443/?SID=DA3D3BAB16528DBA&WAK0Service=https/twostep.netid.cornell.edu@CIT.CORNELL.EDU&WAK2Name=&... (629)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:35:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://secure.progress.com/oam/UI/Login?realm=%2FExternal&goto=https%3A%2F%2Fsecure.progress.com%2Foam%2Foauth2%2Fauthorize%3F... (1039)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:38:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/a081ff79-318c-45ec-95f3-38ebc2801472/oauth2/authorize?client_id=8ecaaa96-a10f-4a1b-b382-52f94... (686)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:46:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://myitsm.nih.gov/auth_redirect.do?sysparm_url=https%3A%2F%2Fauth.nih.gov%2Faffwebservices%2Fpublic%2Fsaml2sso%3FSAMLReque... (701)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:46:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000006-0000-0ff1-ce00-000000000000&response_mode=form_pos... (655)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:47:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://mymcgill.mcgill.ca/portal/page/portal/Login?site2pstoretoken=v1.4~CDE9E673~6BCAD782BBD43143339B866448EEBE3976BF4816F60F... (974)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 13:51:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.aol.com/?done=https%3A%2F%2Fapi.login.aol.com%2Foauth2%2Frequest_auth%3Fclient_id%3Ddj0yJmk9VlN3cDhpNm1Id0szJmQ9W... (1233)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:01:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://bluetooth.service-now.com/auth_redirect.do?sysparm_url=https%3A%2F%2Fauth0.bluetooth.com%2Fsamlp%2FcMa7Z5CgUAWKpIfCDEvK... (845)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:09:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000006-0000-0ff1-ce00-000000000000&response_mode=form_pos... (655)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:10:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.3cx.com/Account/Login?returnUrl=%2FSaml%2FLogin%3FSamlRequest%3DfZFLT8MwEIT%252FSm4%252B5eHQlMZKIkWtkCoVhFrKgQuyn... (538)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:11:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://id.vdms.io/login?returnUrl=%2fconnect%2fauthorize%2fcallback%3fclient_id%3dc036a5f8-411e-48bb-be8e-53ac0310b55a%26respo... (571)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:11:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://id.vdms.io/login?returnUrl=%2fconnect%2fauthorize%2fcallback%3fclient_id%3dc036a5f8-411e-48bb-be8e-53ac0310b55a%26respo... (571)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:14:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'http://adexchangegate.com/script/s2iurl.php?csid=2385367&s1=154430_36058_pyload.org&md=1&stamat=m%7C%2C%2CAia3tiPqtGU3Bv-GH0dEd... (651)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:14:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://auth.documentfoundation.org/saml/singleSignOn?SAMLRequest=pVLLbsIwELzzFch3CIYAwQIkCn0gUUBAe%2BgFGWcBS4mdeu2W%2Fn1NQktbC... (704)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:14:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://auth.documentfoundation.org/saml/singleSignOn?SAMLRequest=pVLLbsIwELzzFch3CIYAwQIkCn0gUUBAe%2BgFGWcBS4mdeu2W%2Fn1NQktbC... (704)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:16:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://adfs.massey.ac.nz/adfs/ls/?client-request-id=1a852493-940b-47bf-8676-92831520cae3&username=&wa=wsignin1.0&wtrealm=urn%3... (755)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:46:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://platform.spgi.spglobal.com/web/client?auth=inherit&bmctx=1305DE25F219961752D2443C2563A499&contextType=external&username... (520)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000006-0000-0ff1-ce00-000000000000&response_mode=form_pos... (655)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000006-0000-0ff1-ce00-000000000000&response_mode=form_pos... (655)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:57:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.redhat.com/auth/realms/redhat-external/protocol/saml?SAMLRequest=fZJJb8IwEIX%2FSm4%2BGZOQsFhJpAhUCYlWFV0OvVTGDE0kL6... (1048)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 14:57:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.redhat.com/auth/realms/redhat-external/protocol/saml?SAMLRequest=fZJJb8IwEIX%2FSm4%2BGZOQsFhJpAhUCYlWFV0OvVTGDE0kL6... (1048)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:01:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.aol.com/?done=https%3A%2F%2Fapi.login.aol.com%2Foauth2%2Frequest_auth%3Fclient_id%3Ddj0yJmk9UTEyUFJQTkJjVjEzJmQ9W... (971)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:01:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.aol.com/?done=https%3A%2F%2Fapi.login.aol.com%2Foauth2%2Frequest_auth%3Fclient_id%3Ddj0yJmk9UTEyUFJQTkJjVjEzJmQ9W... (971)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:10:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/32b27f54-09fb-48af-9c17-0f98a5d598bf/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (551)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:11:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 15:22:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (566)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:22:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (566)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:22:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (566)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:22:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (566)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:38:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/50f64fd3-ff8c-479f-9451-7045787df106/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 15:38:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/50f64fd3-ff8c-479f-9451-7045787df106/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 16:06:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.acumatica.com/Frames/Login.aspx?ReturnUrl=%2fPages%2fSAML%2fLoginSaml.aspx%3fSAMLRequest%3dfVNNj9owEL3zK1Du%252BWSB... (836)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 16:06:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/bc10e052-b01c-4849-9967-ee7ec74fc9d8/saml2?SAMLRequest=fVNNj9owEL33V0S%2BO4lDFogFSBRUFWnbIqB7... (1155)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 16:06:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (520)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 16:06:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%... (520)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 16:22:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'http://La%20Confederaci%C3%B3n%20FEAFES%20celebrar%C3%A1%20un%20acto%20estatal%20en%20el%20Ministerio%20de%20Sanidad,%20Pol%C3%... (573)"; SQL statement:
+INSERT INTO queue (url, crawled) VALUES (?, false) [22001-195]
+2019-05-21 16:29:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'http://Over%20the%20last%20couple%20of%20days%20I%27ve%20re-read%20all%20of%20this%20thread%20and%20of%20our%20thread%20on%20th... (2748)"; SQL statement:
+INSERT INTO queue (url, crawled) VALUES (?, false) [22001-195]
+2019-05-21 16:46:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/d9c45913-7653-4be2-920b-bdb038638184/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (549)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 17:01:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/cef2ae5a-2666-4716-9b60-e88e2aebf49a/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 17:01:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/cef2ae5a-2666-4716-9b60-e88e2aebf49a/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 17:01:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/cef2ae5a-2666-4716-9b60-e88e2aebf49a/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (547)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 17:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 17:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:133)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:55)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.nextRow(JdbcResultSet.java:3269)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:131)
+	... 7 more
+2019-05-21 17:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "1" for parameter "columnIndex" [90008-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3197)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3229)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-05-21 17:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:133)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:55)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.nextRow(JdbcResultSet.java:3269)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:131)
+	... 7 more
+2019-05-21 17:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:133)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:55)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.nextRow(JdbcResultSet.java:3269)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:131)
+	... 7 more
+2019-05-21 17:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 17:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 17:07:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.isOnValidRow(JdbcResultSet.java:3219)
+	at org.h2.jdbc.JdbcResultSet.checkOnValidRow(JdbcResultSet.java:3223)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 17:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "1" for parameter "columnIndex" [90008-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3197)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3229)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-05-21 17:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:133)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:55)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.nextRow(JdbcResultSet.java:3269)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:131)
+	... 7 more
+2019-05-21 17:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3233)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	... 7 more
+2019-05-21 17:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 17:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "1" for parameter "columnIndex" [90008-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3197)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3229)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:108)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-05-21 17:08:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 17:11:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.treasury.gov/login/forms/uid/fsprod?TYPE=33554433&REALMOID=06-1a0d7f9a-c0dd-1007-85bb-862082da0000&GUID=&SMAUTHREAS... (972)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 17:14:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "1" for parameter "columnIndex" [90008-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3197)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3229)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:332)
+	at ch.unibas.ias.webcrawler.database.H2Queue.size(H2Queue.java:56)
+	at ch.unibas.ias.webcrawler.database.H2Queue.isEmpty(H2Queue.java:106)
+	at ch.unibas.ias.webcrawler.database.QueueExtender.isEmpty(QueueExtender.java:79)
+	at ch.unibas.ias.webcrawler.webcrawler.WebCrawler.crawl(WebCrawler.java:57)
+	at ch.unibas.ias.webcrawler.App.run(App.java:19)
+	at ch.unibas.ias.webcrawler.App.lambda$main$0(App.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-05-21 17:14:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-195]
+2019-05-21 17:15:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://idp.unibo.it/adfs/ls/?SAMLRequest=fZHNTsMwEIRfJfK9dZwqtFhNpNAeqFQgagIHLsh%2FoZYcO3gdCm9P2oAoByr5ZM9%2BMzteAmtNR4s%2B7O1... (1094)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 17:21:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 17:21:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 17:38:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 18:03:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/2c2b2d31-2e3e-4df1-b571-fb37c042ff1b/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (555)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 18:03:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/2c2b2d31-2e3e-4df1-b571-fb37c042ff1b/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (555)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 18:10:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://imdc.service-now.com/auth_redirect.do?sysparm_url=https%3A%2F%2Fimdc.okta.com%2Fapp%2Fservicenow_ud%2Fexk1el89l33pbbhOV... (927)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 18:47:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://connect.telenordigital.com/id/signin?gui_config=eyJraWQiOiIxIiwiYWxnIjoiUlMyNTYifQ.eyJsb2MiOiJlbiIsImxzaSI6Ijg5ODQzZDkw... (885)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 18:57:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://smile.amazon.de/ap/signin/260-1892616-8830134?_encoding=UTF8&openid.assoc_handle=amzn_smile_desktop_de&openid.claimed_i... (593)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 18:57:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://smile.amazon.de/ap/signin/260-1892616-8830134?_encoding=UTF8&openid.assoc_handle=amzn_smile_desktop_de&openid.claimed_i... (593)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 19:00:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://signin.intel.com/?TYPE=33554433&REALMOID=06-ed4a774f-7b56-4e6e-939a-1a7df400b4df&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGEN... (1050)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 19:04:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-195]
+2019-05-21 19:27:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "STRINGDECODE('http://No, Lehman Brothers did not \u201cprecipitate\u201d the financial crisis. The better metaphor is that Lehma... (539)"; SQL statement:
+INSERT INTO queue (url, crawled) VALUES (?, false) [22001-195]
+2019-05-21 19:29:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sso.cas.org:443/as/authorization.oauth2?response_type=code&client_id=PA_Websession&redirect_uri=https%3A%2F%2Fscifinder... (642)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 19:50:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/e1368d1e-3975-4ce6-893d-fc351fd44dcd/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (548)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 19:50:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/e1368d1e-3975-4ce6-893d-fc351fd44dcd/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (548)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 19:50:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/e1368d1e-3975-4ce6-893d-fc351fd44dcd/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (548)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 19:50:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://login.microsoftonline.com/e1368d1e-3975-4ce6-893d-fc351fd44dcd/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-00000... (548)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
+2019-05-21 20:30:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "URL VARCHAR(500) SELECTIVITY 100": "'https://sts.iese.edu/adfs/ls/?SAMLRequest=tVJNbxMxEP0rK9%2B93o8mClYSKTRCRCoQNYEDF%2BTas4klr714xiz8e9zdopYDvXGy9TzvzZvnWaPq3SB3i... (1154)"; SQL statement:
+INSERT INTO page (url, header, date, cms, version, stat_wp_admin, stat_strong_password, stat_humanity, stat_jetpack, stat_recaptcha, plug_woocommerce, plug_yoastseo, plug_redirection, plug_nextgengallery, plug_contactform7, security_rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [22001-195]
