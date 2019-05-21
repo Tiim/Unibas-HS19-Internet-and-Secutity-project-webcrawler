@@ -30,7 +30,15 @@ public class DBConnection {
             "stat_strong_password BOOLEAN," +
             "stat_humanity BOOLEAN," +
             "stat_jetpack BOOLEAN," +
-            "stat_recaptcha BOOLEAN" +
+            "stat_recaptcha BOOLEAN," +
+            //plugins:
+            "plug_woocommerce BOOLEAN," +
+            "plug_yoastseo BOOLEAN," +
+            "plug_redirection BOOLEAN," +
+            "plug_nextgengallery BOOLEAN," +
+            "plug_contactform7 BOOLEAN," +
+            //security:
+            "security_rating VARCHAR(50)" +
             ")";
 
     String tableQueue = "CREATE TABLE IF NOT EXISTS queue (" +

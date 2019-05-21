@@ -27,6 +27,8 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 
+    compile 'commons-net:commons-net:3.6'
+
     compile 'org.jsoup:jsoup:1.11.3'
     // https://mvnrepository.com/artifact/com.h2database/h2
     runtime group: 'com.h2database', name: 'h2', version: '1.4.195'

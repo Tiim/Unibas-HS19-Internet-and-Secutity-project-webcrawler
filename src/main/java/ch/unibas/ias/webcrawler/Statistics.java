@@ -7,6 +7,9 @@ import java.sql.SQLException;
 
 public class Statistics {
 
+  // SELECT cms, STAT_WP_ADMIN, STAT_STRONG_PASSWORD, STAT_HUMANITY, STAT_JETPACK, STAT_RECAPTCHA FROM page WHERE STAT_WP_ADMIN = true
+  // SELECT cms, STAT_WP_ADMIN, STAT_STRONG_PASSWORD, STAT_HUMANITY, STAT_JETPACK, STAT_RECAPTCHA FROM page WHERE cms LIKE 'Wordpress' AND STAT_WP_ADMIN = true
+
   private DBConnection connection;
 
   public Statistics () throws Exception {

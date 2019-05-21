@@ -59,11 +59,12 @@ public class WebCrawler implements Crawler {
                 Document currentWebPage = Jsoup.connect(queue.poll().toString()).get();
                 MyDocument document = new MyDocument(currentWebPage);
                 WordPressLoginSecurityStats stats = null;
-                if(document.getCMS().equals("WordPress")) {
+                WordPressDangerousPlugins plugins = null;
+                if(document.getCMS().equals("Wordpress")) {
                     stats = new WordPressLoginSecurityStats(document);
-                    System.out.println(stats);
+                    plugins = new WordPressDangerousPlugins(document);
                 }
-                save(document, stats, document);
+                save(document, stats, plugins, document);
 
 
 
@@ -74,6 +75,7 @@ public class WebCrawler implements Crawler {
                     queue.push(newURL);
                 }
                 System.out.println("Crawled " + document + " links=" + linksOnPage.size());
+
 
                 if (loops % 5 == 0 && master) {
                     System.out.println("========================");
@@ -89,8 +91,8 @@ public class WebCrawler implements Crawler {
         System.out.println("Crawl completed!");
     }
 
-    private void save(MyDocument document, WordPressLoginSecurityStats stats, MyDocument myDocument) {
-        db.addRecord(document.getDocument().location(), document.getDocument().outerHtml(),"", new Date(), stats, myDocument);
+    private void save(MyDocument document, WordPressLoginSecurityStats stats, WordPressDangerousPlugins plugs, MyDocument myDocument) {
+        db.addRecord(document.getDocument().location(), document.getDocument().outerHtml(),"", new Date(), stats, plugs, myDocument);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package ch.unibas.ias.webcrawler.database;
 
 import ch.unibas.ias.webcrawler.webcrawler.MyDocument;
+import ch.unibas.ias.webcrawler.webcrawler.WordPressDangerousPlugins;
 import ch.unibas.ias.webcrawler.webcrawler.WordPressLoginSecurityStats;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class MemoryDatabase implements Database {
         private WordPressLoginSecurityStats stats;
         private final MyDocument myDocument;
 
-        public Entry(String url, String html, String headers, Date date, WordPressLoginSecurityStats stats, MyDocument myDocument) {
+        public Entry(String url, String html, String headers, Date date, WordPressLoginSecurityStats stats, WordPressDangerousPlugins plugs,  MyDocument myDocument) {
 
             this.url = url;
             this.html = html;
@@ -31,7 +32,7 @@ public class MemoryDatabase implements Database {
     }
 
     @Override
-    public void addRecord(String url, String html, String httpHeaders, Date downloadDate, WordPressLoginSecurityStats stats, MyDocument myDocument) {
-        entries.add(new Entry(url, html, httpHeaders, downloadDate, stats, myDocument));
+    public void addRecord(String url, String html, String httpHeaders, Date downloadDate, WordPressLoginSecurityStats stats, WordPressDangerousPlugins plugs, MyDocument myDocument) {
+        entries.add(new Entry(url, html, httpHeaders, downloadDate, stats, plugs, myDocument));
     }
 }
